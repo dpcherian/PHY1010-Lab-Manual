@@ -1,0 +1,77 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{titling}
+% \pretitle{\begin{center}\huge}
+% \posttitle{\par\end{center}\vspace{\baselineskip}}
+% \preauthor{\normalfont\normalsize\begin{center}\begin{tabular}[t]{c}}
+% \postauthor{\end{tabular}\end{center}\vspace{\baselineskip}}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{subcaption}
+\usepackage[]{caption}
+
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{physics}
+
+\usepackage{nicefrac}
+\usepackage{enumitem}
+\graphicspath{{figs/}}
+
+\setlength{\parskip}{\baselineskip}%
+\setlength\parindent{0pt}
+
+\usepackage{color, colortbl}
+\definecolor{Gray}{gray}{0.9}
+
+\usepackage{arydshln}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+
+\begin{document}
+
+\part{Introductory Sessions}
+
+\input{1_Measurement.tex}
+
+\clearpage
+
+\part{Experiments}
+\input{Diffraction.tex}
+
+
+\input{Soft_Massive_Spring.tex}
+
+\clearpage
+\pagenumbering{arabic} 
+
+\input{Three_Terminal_Black_Box.tex}
+
+\clearpage
+\pagenumbering{arabic} 
+ 
+\input{Incandescent_Lamp.tex}
+
+\clearpage
+\pagenumbering{arabic} 
+
+\input{Diffraction.tex}
+
+\clearpage
+\pagenumbering{arabic} 
+
+
+
+\part{Assessment}
+
+\input{Written_Exam.tex}
+
+\clearpage
+\pagenumbering{arabic} 
+
+\end{document}
