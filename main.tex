@@ -33,6 +33,16 @@
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
 
+
+% \newtcolorbox{imp}{colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries,title=Important}
+
+% \newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Question}
+
+\newtcolorbox{imp}{colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries}
+
+\newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
+
+
 \begin{document}
 
 \part{Introductory Sessions}
@@ -65,7 +75,15 @@
 \clearpage
 \pagenumbering{arabic} 
 
+\part{Lecture Demonstration}
 
+\clearpage
+\pagenumbering{arabic}
+
+\input{Lecture_Demonstration.tex}
+
+\clearpage
+\pagenumbering{arabic}
 
 \part{Assessment}
 
