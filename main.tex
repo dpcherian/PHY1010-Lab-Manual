@@ -43,51 +43,79 @@
 \newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
 
 
+
+%% [[ DEFINING `POLYTECHNIQUE' COLOURS
+\definecolor{Blue}{RGB}{0,59,92}
+\definecolor{Grey}{RGB}{74,73,72}
+\definecolor{Red}{RGB}{247,38,22}
+\definecolor{DarkRed}{RGB}{197,26,27}
+\definecolor{Yellow}{RGB}{223,176,0}
+\definecolor{White}{RGB}{255,255,255}
+%% END POLYTECHNIQUE COLORS]]
+
+
+\usepackage{color,soul}
+\usepackage{tikz}
+\setulcolor{Red}
+\setul{}{2pt}
+
+
+
+
 \begin{document}
 
-\part{Introductory Sessions}
+\input{00_Title_Page.tex}
 
-\input{1_Measurement.tex}
+\tableofcontents
+
+\textcolor{Blue}{\part{Introductory Sessions}}
+\tikz[remember picture,overlay]\node[shift={(,)},opacity=0.2] at (current page.east) {\includegraphics[width=17.5cm]{logo}};
+
+\input{01_Simple_Pendulum.tex}
 
 \clearpage
 
-\part{Experiments}
-\input{Diffraction.tex}
+\textcolor{Blue}{\part{Experiments}}
+\tikz[remember picture,overlay]\node[shift={(,)},opacity=0.2] at (current page.east) {\includegraphics[width=17.5cm]{logo}};
+
+\input{07_Diffraction.tex}
 
 
-\input{Soft_Massive_Spring.tex}
+\input{04_Soft_Massive_Spring.tex}
 
 \clearpage
 \pagenumbering{arabic} 
 
-\input{Three_Terminal_Black_Box.tex}
+\input{05_Three_Terminal_Black_Box.tex}
 
 \clearpage
 \pagenumbering{arabic} 
  
-\input{Incandescent_Lamp.tex}
+\input{06_Incandescent_Lamp.tex}
 
 \clearpage
 \pagenumbering{arabic} 
 
-\input{Diffraction.tex}
+\input{07_Diffraction.tex}
 
 \clearpage
 \pagenumbering{arabic} 
 
-\part{Lecture Demonstration}
+\textcolor{Blue}{\part{Lecture Demonstration}}
+\tikz[remember picture,overlay]\node[shift={(,)},opacity=0.2] at (current page.east) {\includegraphics[width=17.5cm]{logo}};
 
 \clearpage
 \pagenumbering{arabic}
 
-\input{Lecture_Demonstration.tex}
+\input{10_Lecture_Demonstration.tex}
 
 \clearpage
 \pagenumbering{arabic}
 
-\part{Assessment}
+\textcolor{Blue}{\part{Assessment}}
+\tikz[remember picture,overlay]\node[shift={(,)},opacity=0.2] at (current page.east) {\includegraphics[width=17.5cm]{logo}};
 
-\input{Written_Exam.tex}
+\input{11_Written_Exam.tex}
 
 \clearpage
 \pagenumbering{arabic} 
