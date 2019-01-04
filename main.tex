@@ -42,6 +42,8 @@
 
 \newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
 
+\newtcolorbox{tip}{colback=green!5!white,colframe=green!35!black,fonttitle=\bfseries,title=Tip}
+
 
 
 %% [[ DEFINING `POLYTECHNIQUE' COLOURS
@@ -68,12 +70,24 @@
 
 \tableofcontents
 
+\clearpage
+\pagenumbering{arabic}
+
 \textcolor{Blue}{\part{Introductory Sessions}}
 \tikz[remember picture,overlay]\node[shift={(,)},opacity=0.2] at (current page.east) {\includegraphics[width=17.5cm]{logo}};
 
 \input{01_Simple_Pendulum.tex}
-
 \clearpage
+\pagenumbering{arabic}
+
+\input{02_Measurement.tex}
+\clearpage
+\pagenumbering{arabic}
+
+\input{03_Plotting.tex}
+\clearpage
+\pagenumbering{arabic}
+
 
 \textcolor{Blue}{\part{Experiments}}
 \tikz[remember picture,overlay]\node[shift={(,)},opacity=0.2] at (current page.east) {\includegraphics[width=17.5cm]{logo}};
