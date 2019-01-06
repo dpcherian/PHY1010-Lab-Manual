@@ -173,6 +173,117 @@ Another reason for two measurements not agreeing totally is due to small, uncorr
 
 Such variations, being \textbf{random}, are expected to fall just as often \textit{above} a certain value as \textit{below} it. A truly random source would give you a \textbf{Gaussian} distribution of errors; the mean of this distribution $$\overline{m}_N = \frac{\sum_{i=1}^{N}{m_i}}{N}$$ would approach the `best' value as the number $N$ of well-sampled values increases. The uncertainty of these measurements would then be quantified by the \textbf{standard deviation}\footnote{There is a reason for the $N-1$, it is known as the number of `degrees of freedom' in statistics. Understanding it is not essential for this course.} $$\Delta m_N = \sqrt{\frac{(m_i - \overline{m}_N)^2}{N-1}}$$
 
+more conventionally denoted by $\sigma$.
+
+
+\subsubsection{Precision, Accuracy, and Statistics}
+
+\begin{enumerate}
+    \item \textbf{Accuracy:} is how closely a measurement comes to some `true' value. It determines how closely we eliminate systematic errors and mistakes in our measurements.
+    \item \textbf{Precision:} is how closely a set of measurements agree \textit{with each other}. It determines how well we have eliminated random errors in our measurements.
+\end{enumerate}
+
+To use a sports simile, if you're playing football and are accurate, your aim will always take the ball close to or into the goal. If, however, you harbour a personal grudge against the coach and succeed in beaning him on the head every time you get the ball, then you would be \textit{precise}, but not accurate\footnote{It is widely accepted that the point of football get the ball into the goal and not to traumatise your coach, which is why this example works.}.
+
+\textbf{A caveat:} In any Physics experiment worth doing, you usually don't have the answer beforehand. This means you don't have a `true' value with which to compare your answer. This is why it is so important to be both precise (reduce all random errors present in your measurements) and accurate (reduce all systematic errors present in your measurement). You must also, however, come up with ways to check if your answer is accurate \textit{without} trying to resort to a `textbook' solution.
+
+\begin{question}
+\paragraph{Question:} In the example of the `superluminal' neutrinos given earlier, was the error of the OPERA team one of inaccuracy, or of imprecision? 
+\end{question}
+
+\textbf{A note on statistics:} Consider two sets of measurements of the acceleration due to gravity:
+
+\begin{table}[!htb]
+\parbox{.45\linewidth}{
+\centering
+\begin{tabular}{cc}
+\hline
+\textbf{S. No.}&$\bm{g}\,\, (ms^{-2})$\\
+\hline
+1&$9.80\pm0.01$\\
+2&$0.70\pm0.01$\\
+3&$18.90\pm0.01$\\
+4&$15.60\pm0.01$\\
+5&$4.10\pm0.01$\\
+\hline
+Mean&$9.82\pm0.01$\\
+\hline
+\end{tabular}
+\caption{Measurement of $g$ (Set 1)}
+}
+\hfill
+\parbox{.45\linewidth}{
+\centering
+\begin{tabular}{cc}
+\hline
+\textbf{S. No.}&$\bm{g}\,\, (ms^{-2})$\\
+\hline
+1&$9.83\pm0.01$\\
+2&$9.80\pm0.01$\\
+3&$9.82\pm0.01$\\
+4&$9.84\pm0.01$\\
+5&$9.83\pm0.01$\\
+\hline
+Mean&$9.82\pm0.01$\\
+\hline
+\end{tabular}
+\caption{Measurement of $g$ (Set 2)}
+}
+\end{table}
+
+It would obviously be wrong to go simply by the mean and say that both these sets of data were equally reliable. In fact, stating the mean of the first set as the acceleration due to gravity \textbf{doesn't make sense}. 
+
+Suppose we compared the mean of a data set to its \textit{dispersion} about the mean. If this is small, we could then say that there is some `true' value and that all the different values we measured occurred due to random fluctuations about this `true' value. Since the fluctuations are random, we could assume that they average out to zero, leaving us with a closer estimate to the `true' value than any individual reading.
+
+When the significant source of error is considered to be random, the distribution is a Gaussian, and the measure of dispersion is the \textbf{standard deviation} denoted by $\sigma$. \textit{In such a case}, the error $\delta x$ in the reading could be taken to be $\sigma_x$ without much loss of generality, as it can be shown that there is a 68\% likelihood that an individual measurement will fall within one standard deviation $(\pm\sigma_x)$ of the true value\footnote{Keep in mind, however, the example of superluminal neutrinos we gave earlier: in that case, the error was \textit{assumed} to be random, and their precise data led them to a false positive. The true error turned out to be systematic, leading to \textit{different (and larger) error bars}!}. 
+
+\begin{question}
+\paragraph{Question:} In above sets of data (with standard deviations of $7.6\,\,ms^{-2}$ and $0.02\,\,ms^{-2}$ respectively), does the quoted error of $\pm 0.01\,\, ms^{-2}$ make sense
+\begin{enumerate}
+    \item For Set 1?
+    \item For Set 2?
+    \item For Both?
+    \item For Neither?
+\end{enumerate}
+Justify your answer quantitatively.
+\end{question}
+
+\begin{imp}
+The two errors in the lab you will encounter that you cannot remove are \textbf{least count errors} and \textbf{random errors}. Remember to always compare them and \textbf{\textit{take the larger value}}. In Set 1 it makes no sense to say $g$ is specified to $(9.82\pm0.01)\,ms^{-2}$, since all of the values are much farther away than that!
+\end{imp}
+
+\begin{question}
+\begin{enumerate}
+    \item \textbf{Question:} Multiple measurements with the same instrument increases the
+    \begin{enumerate}
+        \item Accuracy
+        \item Precision
+        \item Both
+    \end{enumerate}
+    
+    \item \textbf{Question:} Consider the following data-table~\\
+    \begin{tabular}{cccccc}
+    \hline
+    \textbf{S. No.}&1&2&3&4&5\\
+    \hline
+    \textbf{Time Period} ($s$)& $1.2\pm0.1$&$1.2\pm0.1$&$1.2\pm0.1$&$1.2\pm0.1$&$1.2\pm0.1$\\
+    \hline
+    \end{tabular}~\\~\\
+    The standard deviation is $0.0$. Would it be right to say that $T_\text{avg} = 1.2\pm 0.0$?
+\end{enumerate}
+\end{question}
+
+However, keep in mind there are many cases where the mean  \textbf{does not} represent some true value\footnote{For example, even if the average number of siblings every student has is $1.574$, there is no student who has a non-integer number of siblings.}. There are also cases where the standard deviation contains physical information. Such cases are usually a result of statistical phenomena.
+
+\begin{tip}
+\begin{enumerate}
+    \item In a coin-toss experiment with a large number of tosses, $\sigma$ gives you a measure of the bias of the coin.
+    \item In a random walk, $\sigma$ can be a measure of the diffusion coefficient $D$.
+    \item In shot-noise --  the statistical fluctuations of current due to the actual number of electrons flowing in the conductor per unit time -- $\sigma$ gives you a measure of Boltzmann's constant $k_B$.
+\end{enumerate}
+\end{tip}
+
+
 \subsection{Reporting Errors}
 \subsubsection{Significant figures}
 
@@ -290,10 +401,6 @@ The following rules should exhaust most of the common cases that you will be exp
 \end{enumerate}
 \paragraph{Hint:} The last one is slightly hard. You will first write it as $z = \frac{1}{1 + u}$, where $u = y/x$. Then, calculate $\delta z$ in terms of $\delta u$, and only then $\delta u$ in terms of $\delta x$ and $\delta y$.
 \end{question}
-
-
-\subsubsection{Precision, Accuracy, and Statistics}
-
 
 \section{Apparatus}
 
