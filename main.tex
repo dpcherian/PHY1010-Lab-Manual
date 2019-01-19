@@ -1,9 +1,6 @@
 \documentclass[a4paper,10pt,oneside]{book}
 \usepackage{titling}
-% \pretitle{\begin{center}\huge}
-% \posttitle{\par\end{center}\vspace{\baselineskip}}
-% \preauthor{\normalfont\normalsize\begin{center}\begin{tabular}[t]{c}}
-% \postauthor{\end{tabular}\end{center}\vspace{\baselineskip}}
+
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
@@ -12,8 +9,9 @@
 \usepackage[]{caption}
 
 \usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[dvipsnames]{xcolor}
 \usepackage{tcolorbox}
-\usepackage{hyperref}
+\usepackage[colorlinks=true, urlcolor=BurntOrange]{hyperref}
 \usepackage{physics}
 
 \usepackage{nicefrac}
@@ -46,7 +44,6 @@
 \newtcolorbox{tip}{colback=green!5!white,colframe=green!35!black,fonttitle=\bfseries,title=Tip}
 
 
-
 %% [[ DEFINING `POLYTECHNIQUE' COLOURS
 \definecolor{Blue}{RGB}{0,59,92}
 \definecolor{Grey}{RGB}{74,73,72}
@@ -63,19 +60,26 @@
 \setul{}{2pt}
 
 \usepackage{chngcntr} 
+\usepackage{fancyhdr}
 \counterwithin{section}{chapter}
 \makeatletter
 \@addtoreset{chapter}{part}
 \makeatother 
 \renewcommand{\thepart}{\Roman{part}}
 
-
-
 \begin{document}
-
 \input{00_Title_Page.tex}
 
+\frontmatter
+{
+\setcounter{tocdepth}{1}
+\hypersetup{linkcolor=black}
 \tableofcontents
+}
+
+% \clearpage
+% \setcounter{page}{1}
+\mainmatter
 
 \vbox{
 \textcolor{Blue}{\part{Introductory Sessions}}
@@ -84,40 +88,42 @@
 
 \renewcommand{\chaptername}{Session}
 
-\input{01_Simple_Pendulum.tex}
-\input{02_Measurement.tex}
-\input{03_Plotting.tex}
+\input{01_Data_Collection.tex}
+\input{02_Graphing.tex}
+\input{03_Errors.tex}
+\input{03a_Writing_a_Lab_Report.tex}
+\input{03b_Errors_2.tex}
 
-\vbox{
-\textcolor{Blue}{\part{Experiments}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-}
+% \vbox{
+% \textcolor{Blue}{\part{Experiments}}
+% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+% }
 
-\renewcommand{\chaptername}{Experiment}
+% \renewcommand{\chaptername}{Experiment}
 
-\input{07_Diffraction.tex}
-\input{04_Soft_Massive_Spring.tex}
-\input{05_Three_Terminal_Black_Box.tex}
-\input{06_Incandescent_Lamp.tex}
-\input{07_Diffraction.tex}
+ \input{07_Diffraction.tex}
+% \input{04_Soft_Massive_Spring.tex}
+% \input{05_Three_Terminal_Black_Box.tex}
+% \input{06_Incandescent_Lamp.tex}
+% \input{07_Diffraction.tex}
 
-\vbox
-{\textcolor{Blue}{\part{Lecture Demonstrations}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-}
+% \vbox
+% {\textcolor{Blue}{\part{Lecture Demonstrations}}
+% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+% }
 
-\renewcommand{\chaptername}{Lecture}
+% \renewcommand{\chaptername}{Lecture}
 
-\input{10_Lecture_Demonstration.tex}
+% \input{10_Lecture_Demonstration.tex}
 
 
-\vbox{
-\textcolor{Blue}{\part{Assessment}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-}
+% \vbox{
+% \textcolor{Blue}{\part{Assessment}}
+% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+% }
 
-\renewcommand{\chaptername}{Exam}
+% \renewcommand{\chaptername}{Exam}
 
-\input{11_Written_Exam.tex}
+% \input{11_Written_Exam.tex}
 
 \end{document}

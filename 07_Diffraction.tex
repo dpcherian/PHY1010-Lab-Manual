@@ -19,7 +19,7 @@
 \section*{Apparatus}
 
 \begin{enumerate}
-    \item A 10 mW seminconductor red laser source.
+    \item A 10 mW semiconductor red laser source.
     \item A 5 mW DPSS green laser source.
     \item A set of necessary mounts.
     \item A set of plane diffraction gratings of different grating spacings.
@@ -44,16 +44,21 @@ In this experimental problem, we will use a low power solid-state laser as a sou
 
 \subsection*{Plane Diffraction Grating}
 
-A transmission diffraction grating consists of a large number of slits separated from one another by an opaque region. The grating concentrates the diffracted light along a particular direction in contrast to the single slit, which has a rather broad diffraction maximum. The maxima (bright intense spots) produced by a grating are usually called the principal maxima. They are quite intense and are also widely separated; what cannot be detected visually are the large number of secondary maxima which lie between neighboring principal maxima.
+A transmission diffraction grating consists of a large number of slits separated from one another by an opaque region. The grating concentrates the diffracted light along a particular direction in contrast to the single slit, which has a rather broad diffraction maximum. The maxima (bright intense spots) produced by a grating are usually called the principal maxima. They are quite intense and are also widely separated; what cannot be detected visually are the large number of secondary maxima which lie between neighbouring principal maxima.
 
 The expression, relating wavelength $\lambda$ of light used and the grating spacing $d$, with angle of deviation $\theta$ is,    
 \begin{equation*}
     d \sin{\theta_m} = m \lambda,  \quad\quad\quad \text{for    m  = 1, 2, 3,}\hdots
 \end{equation*}
 
-In the above expression, $m$ represents the order of \textbf{maxima} points and the angle $\theta_m$  corresponds to  $m$th  order maximum intensity point. This relation is valid for a single slit and for the wire like obstacle.
+In the above expression, $m$ represents the order of \textbf{maxima} points and the angle $\theta_m$  corresponds to  $m$th  order maximum intensity point. This relation is valid for a single slit and for the wire-like obstacle.
 
-Fig. 1
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/grating.png}
+    \caption{The diffraction pattern produced by a plane diffraction grating.}
+    \label{fig:grating}
+\end{figure}
 
 \subsection*{Single Slit}
 
@@ -62,13 +67,24 @@ When a (monochromatic) beam of light such as a laser is incident on a narrow sin
 The positions of the \textbf{minima} (zeros) of the intensity distribution pattern of a narrow slit due to a plane wave front (the Fraunhofer diffraction pattern) are given by the relation 
 
 \begin{equation*}
-    a \sin{\theta_m} = m \lambda  \quad\quad\quad \text{for    m  = 1, 2, 3,}\hdots,
+    d \sin{\theta_m} = m \lambda  \quad\quad\quad \text{for    m  = 1, 2, 3,}\hdots,
 \end{equation*}
 
 where $\lambda$ is the wavelength of the incident light, $a$ is the width of the slit and $\theta_m$ is the angle corresponding to $m$th minimum. 
 
-Fig. 2
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/singleslit.png}
+    \caption{The diffraction pattern produced by a single-slit aperture.}
+    \label{fig:singleslit}
+\end{figure}
 
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/doubleslit.png}
+    \caption{The diffraction pattern produced by a double-slit aperture.}
+    \label{fig:doubleslit}
+\end{figure}
 
 
 \subsection*{Circular Aperture}
@@ -83,10 +99,10 @@ where $d$ is the diameter of the circular aperture and $\theta_m$ is the angle o
 
 \begin{equation*}
     \begin{aligned}
-        m = 1 &\quad& \overline{m}=1.22
-        m = 2 &\quad& \overline{m}=2.23
-        m = 3 &\quad& \overline{m}=3.23
-        m = 4 &\quad& \overline{m}=4.24
+        m = 1 &\quad& \overline{m}=1.22\\
+        m = 2 &\quad& \overline{m}=2.23\\
+        m = 3 &\quad& \overline{m}=3.23\\
+        m = 4 &\quad& \overline{m}=4.24\\
     \end{aligned}
 \end{equation*}
 
@@ -134,17 +150,42 @@ For a screen placed at a large distance $D$ from the wire, the positions of the 
 
 \subsection*{Single and double helices:}
   
-               
-Fig. 4 (a) A single helix Fig. 4 (b) A double helix
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.75\textwidth]{figs/singlehelix.png}
+                \caption{Schematic of a single helix (like RNA)}
+                \label{fig:singlehelix1}
+        \end{subfigure}%
+        \begin{subfigure}[b]{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.75\textwidth]{figs/doublehelix.png}
+                \caption{Schematic of a double helix (like DNA)}
+                \label{fig:doublehelix1}
+        \end{subfigure}
+\end{figure}
 
 Now consider a set of four identical wires, the net intensity distribution is a combination of diffraction from each wire and interference due to pairs of wires and hence depends on $a$, $d$ and $s$ \ref{Figure 5 (a)}.
 
 In other words, the combination of three different intensity patterns is observed.
 
   
-
-Fig. 5 (a) Projection of a double helix    Fig. 5(b) Double helix given in the sample
-
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.75\textwidth]{figs/singlehelix.png}
+                \caption{Projection of a double helix}
+                \label{fig:doublehelixprojection}
+        \end{subfigure}%
+        \begin{subfigure}[b]{0.45\textwidth}
+                \centering
+                \includegraphics[width=0.75\textwidth]{figs/doublehelix.png}
+                \caption{The double helix given in the sample.}
+                \label{fig:doublehelix2}
+        \end{subfigure}
+\end{figure}
 
 \section*{Procedural Instructions}
 
