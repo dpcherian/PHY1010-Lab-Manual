@@ -2,11 +2,11 @@
 
 \section{Objective}
 
-To learn how to write a lab report ------
+To learn how to write a lab report. 
 
 \section{Introduction}
 
-Writing how to report an experiment you have done is one of the most important skills you will learn in the lab. The labs report starts from your log book, in which you make notes on the various stages of the experiment as you do it: (i) planning and designing the experiment, (ii) making observations, (iii) analysing data and doing relevant calculations, including error analysis (iv) interpreting your results in light of the theoretical background. What you write in your log book is to the lab report what the initial sketches of an artist are to the final work of art that she produces.
+Writing how to report an experiment you have done is one of the most important skills you will learn in the lab. The lab report starts from your log book, in which you make notes on the various stages of the experiment as you do it: (i) planning and designing the experiment, (ii) making observations, (iii) analysing data and doing relevant calculations, including error analysis (iv) interpreting your results in light of the theoretical background. What you write in your log book is to the lab report what the initial sketches of an artist are to the final work of art that she produces.
 
 You will perhaps also want to remember that your lab report will be graded. Here are some things that your instructor and teaching fellows will notice:
 
@@ -24,18 +24,34 @@ The lab report should contain \textbf{all} the information required for someone 
 \textbf{A non-standard answer with a clear path as to how you got there is worth significantly more than a standard answer that appears unjustified or out of nowhere. }
 \end{imp}
 
-The handouts contain questions about the experiment are scattered around the manual. Make sure you answer them as you write your report; these questions are included at critical points to check your comprehension, and the answers often provide ideas of what to include in a good report. 
+The handouts contain questions about the experiment are scattered around the manual. Make sure you try to answer them as you write your report; these questions are included at critical points to check your comprehension, and the answers often provide ideas of what to include in a good report. 
 
 \begin{imp}
 Spend some time thinking about the format of your lab report. We don't expect something publishable in \textit{Physical Review Letters}, but on the other hand, we don't expect four pages of stream-of-consciousness writing either.
 \end{imp}
+
+\section{Essential Elements of a Report}
+
+As stated above the the lab report should contain all the information needed for someone else to redo the experiment. This means that the following needs to be written:
+
+\begin{enumerate}
+    \item A brief introduction to the experiment, including the aim, the approach to be followed, and a statement of the theoretical background, if needed. (In the introductory lab, enough theoretical background is generally provided, but that may not be true in later labs; in that case you may want to include some of the theory needed to understand the experiment.)
+    \item The equipment used, with details. The details of the instruments don't need to be provided at the beginning but should be provided in the section where they are actually used. For example, if you are using Vernier calipers to measure the diameter of a set of balls, you need to specify the least count of the main scale and of the Vernier scale just before the table with the data on the diameters. 
+    \item The procedure followed. This section should be very clear, and actually state the procedure \textit{you} followed, not what some book says you ought to have followed. 
+    \item The data, clearly tabulated. As stated above, each table should be preceded by the details of the instrument used to collect the data.
+    \item Error analysis, if needed.  
+    \item Graphs, where needed.
+    \item The result, clearly stated. 
+    \item A discussion of the difficulties encountered, and any ideas that may have occurred to you for improvement of the experiment, or other related experiments that could be done.
+    
+\end{enumerate}
 
 \subsubsection{Tables, Figures, and Graphs}
 
 Tables, Figures, and Graphs (which we will come to in the next session) have a required standard of presentation, usually much higher than those you might put in your log book. If possible, have any tables and figures at the top and/or bottom of a page, and do not wrap text around figures or tables.
 
 \begin{imp}
-In general, you may use any software for data analysis. Beginners will usually prefer to use Microsoft Excel or Google Sheets. However, as you progress, it is \textbf{very strongly} advised that you use this lab to learn how to do very elementary plotting and data analysis using Python and Jupyter Notebook.
+In general, you may use any software for data analysis. Beginners will usually prefer to use Microsoft Excel or Google Sheets. However, as you progress, it is \textbf{very strongly} advised that you use this lab to learn how to do very elementary plotting and data analysis using Python and Jupyter Notebook. We will come to this in the next session.
 \end{imp}
 
 \paragraph{Figures:} 
@@ -77,13 +93,15 @@ In general, you may use any software for data analysis. Beginners will usually p
     \item Like figures, tables should be labelled and have a caption. However, they are \textbf{not} figures, but should instead be labelled `Table 1:', etc.
     \item All the entries, including the headings, should fit comfortably in the width or height of the columns or rows; long headings should be avoided. 
     \item The headings of the columns should include the \textbf{units} of the measurement. The readings themselves should not have units.
-    \item Include the uncertainties in every reading (after session 3).
+    \item Include the uncertainties in every reading (after Session 3).
     \item Make sure the rows and columns are the same size throughout the table.
 \end{enumerate}
 
-%\begin{imp}
-%Don’t include tables of data when the information is adequately given in a graph or by a few words of text; this is redundant and wasteful of space. 
-%\end{imp}
+\begin{imp}
+While you will not encounter such situations in this laboratory, there are times when you may have an extremely large amount of data. \textbf{In such cases}, try to avoid tables of data that span many pages when the information is adequately given in a graph or by a few words of text; this is redundant and wasteful of space. ~\\
+
+However, during this introductory lab, we will ask you to always include both tables and graphs.
+\end{imp}
 
 \subsection{Data Interpretation}
 
@@ -104,6 +122,40 @@ Plotting $v$ against $t$ will give you a \textbf{linear} graph whose slope is th
 which is a \textit{quadratic} relationship. In some cases, you might be tempted to plot $S$ as a function of $t$ and fit a quadratic curve. In general, it is better to plot a graph between $S$ and $t^2$. These two quantities exhibit a linear relationship which is easier to fit, and whose slope gives you $g/2$.
 
 One reason for this is because when you have a very small number of points, different polynomials may appear to fit it equally well.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 % \section{Theory: The Simple Pendulum}

@@ -36,7 +36,7 @@
 
 \section*{Introduction}
 
-You are given a sealed box on which three terminals marked A, B and C are provided which connect to a circuit inside. The circuit inside the box consists of \textbf{three} electronic components of different kinds (i.e. resistors, p-n junction diodes, batteries, etc.). Please note that the black box may consist of combinations of either only one or only two or three types of components. 
+You are given a sealed box on which three terminals marked A, B and C are provided which connect to a circuit inside. The circuit inside the box consists of \textbf{three} electronic components of different kinds (i.e. resistors, p-n junction diodes, batteries, etc.). Please note that the black box may consist of combinations of either only one or only two or all three types of components. 
 
 The components may be connected in either a `star' or `delta' connection (refer to the theory section for details). You are expected to identify the interior components as to type and value, and determine how they are connected to each other and to the terminals. 
 
@@ -56,7 +56,7 @@ In \textbf{Part D} \textit{(optional)}, the black box will contain only combinat
 
 \subsection*{Star and Delta Connections}
 
-Standard 3-component circuits take on two major forms with names that represent the way in which the components are connected: a \textbf{Star} sometimes represented by Y, and a Delta connected network sometimes represented by a triangle or $\Delta$. Both these forms, represented in Figure (\ref{starAndDelta}), are indistinguishable from each other, in that for every star connection there is an equivalent delta connection (with different values for the individual components) and vice versa. It is for this reason that you must keep in mind what form the black box is in before drawing any conclusions.
+Standard 3-component circuits take on two major forms with names that represent the way in which the components are connected: a \textbf{Star} sometimes represented by Y, and a Delta connected network sometimes represented by a triangle or $\Delta$. Both these forms, represented in Figure (\ref{fig:starAndDelta}), are indistinguishable from each other, in that for every star connection there is an equivalent delta connection (with different values for the individual components) and vice versa. It is for this reason that you must keep in mind what form circuit in the black box has before drawing any conclusions.
 
 \begin{figure}[!htb]
        \begin{subfigure}[t]{0.3\textwidth}
@@ -76,14 +76,14 @@ Standard 3-component circuits take on two major forms with names that represent 
                 \caption{Delta connection}
         \end{subfigure}%
         \caption{Circuit connections}
-        \label{starAndDelta}
+        \label{fig:starAndDelta}
 \end{figure}
 
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.6]{stardelta.png}
 \caption{Star to Delta conversion}
-\label{starToDelta}
+\label{fig:starToDelta}
 \end{figure}
 
 The following formulae will allow you to move between a star connection and its associated delta connection and vice versa:
@@ -155,7 +155,7 @@ Unlike a resistor, a diode does not behave linearly with respect to the applied 
 \centering
 \includegraphics[scale=0.6]{diodeChar.png}
 \caption{Diodes and their characteristics}
-\label{diodeChar}
+\label{fig:diodeChar}
 \end{figure}
 
 
@@ -187,7 +187,7 @@ A function generator is a type of signal generator that is used to generate simp
 \begin{enumerate}
 \item The use of a multimeter to measure the resistance is strictly prohibited.
 \item Do not try to open the black box, use only terminals A, B and C for the connections.
-\item Use fixed value resistors to prevent large currents in the circuit. The current should not exceed 50 mA.
+\item Use fixed value resistors to prevent large currents in the circuit. The current should not exceed 500 mA.
 \item \textbf{Do not} short the outputs of the power supply, it could damage the equipment.
 \item Passing more current through the multimeter's (250 mA or 20A) sockets than they can handle will cause the fuses in the multimeter to burn out, leading to an open circuit. Use an appropriate resistance to limit the current in the circuit.
 \item When drawing circuit diagrams use the standard symbols.

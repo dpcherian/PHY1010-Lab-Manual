@@ -36,17 +36,123 @@
 
 \section*{Introduction}
 	 
-In Opticks (1704), Issac Newton wrote, ``Light is never known to follow crooked passages nor to bend into the shadow''. He explained this by describing how particles of light always travel in a straight line, and how objects kept in the path of the light cast a shadow because the particles can never spread out behind the object. However, a set of experiments on the propagation of light through small apertures performed by Francesco Grimaldi, Augustine Fresnel, Thomas Young and a few others firmly established that light actually enters into the shadow region with a definite pattern when it passes through around an edge. The resulting pattern depends on the relative size of the aperture or obstacle and the wavelength of light. If the size is much larger than the wavelength, the bending will be almost unnoticeable. However, if the two are similar in size, the diffraction will be considerable.    
+In \textit{Opticks} (1704), Issac Newton wrote, ``Light is never known to follow crooked passages nor to bend into the shadow''. He explained this by describing how particles of light always travel in a straight line, and how objects kept in the path of the light cast a shadow because the particles can never spread out behind the object. However, a set of experiments on the propagation of light through small apertures performed by Francesco Grimaldi, Augustine Fresnel, Thomas Young and a few others firmly established that light actually enters into the shadow region with a definite pattern when it passes through around an edge. The resulting pattern depends on the relative size of the aperture or obstacle and the wavelength of light. If the size is much larger than the wavelength, the bending will be almost unnoticeable. However, if the two are similar in size, the diffraction will be considerable.    
      
 In this experimental problem, we will use a low power solid-state laser as a source of an intense beam of monochromatic light. When light from a distant source (or a laser source) passes around a thin aperture or through a narrow aperture and is then intercepted by a viewing screen, the light produces a pattern on the screen called a \textit{diffraction pattern}. When such a beam is incident on various diffracting components like a plane diffraction grating, a single slit, a wire mesh or a two-dimensional diffraction grating, the light emerging from these components show a variety of interesting diffraction patterns. This pattern consists regions of maximum and minimum intensities, which characterise the diffracting object. 
 
 \section*{Theory}
 
+
+\begin{imp}
+
+\begin{center}
+    \textbf{Babinet's Principle}
+\end{center}
+
+Two objects are called \textit{complementary} if one of them is transparent where the other is opaque and opaque where the other is transparent. An example of this is given in Figure (\ref{fig:complementary}).~\\
+
+\textbf{Babinet's principle} states that
+
+\begin{center}
+``Complementary objects \textbf{produce the same diffraction pattern}, except for the intensity of the central maxima.''
+\end{center}
+
+This is a highly non-intuitive result, and one that you may study in some of your later courses. The mathematics of this are far beyond the scope of this lab session. 
+Henceforth we will not differentiate between the patterns made by such complementary objects. We will thus speak of a single slit (or of a thin wire) having the `same' diffraction pattern, keeping in mind that the intensities of the central maxima are different.
+\end{imp}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.6]{figs/complementary.png}
+    \caption{Transparency of a thin wire and of a single slit.}
+    \label{fig:complementary}
+\end{figure}
+
+\begin{question}
+\paragraph{Question:} What are the complementary objects of the following:
+
+\begin{enumerate}
+\item A transparent sheet of paper.
+\item A circular aperture of diameter $d$.
+\end{enumerate}
+\end{question}
+
+
+
+\subsection*{The Single Slit (or Thin Wire)}
+
+When a (monochromatic) beam of light such as a laser is incident on a narrow single slit, the light emerging from the slit shows a diffraction pattern on a screen. The distribution of the intensity of light received on a screen show a pattern of varying intensity consisting of a bright central maximum with alternate minima and maxima of decreasing intensity on either side, known as a \textit{Fraunhofer diffraction pattern}.
+
+Similarly, instead of a slit of width $a$, supposing we had a \textit{wire} of diameter $a$ placed as an obstruction to the laser beam. The resulting intensity pattern as observed on a screen almost exactly the same as that observed for a single slit. This intensity distribution can be written as a function of the angle $\theta$ as
+
+\begin{equation*}
+    I(\theta) = I(0) \left( \frac{\sin \beta}{\beta} \right)^2, \quad \quad  \beta = \frac{\pi a \sin \theta}{\lambda}
+\end{equation*}
+
+This function has been represented in Figure (\ref{fig:singleslit}).
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/singleslit.png}
+    \caption{The diffraction pattern produced by a single-slit aperture (or thin wire).}
+    \label{fig:singleslit}
+\end{figure}
+
+
+Moving away from the central spot, when $\sin\beta=0$ (but $\beta \neq 0$), the intensity vanishes! The positions of these \textbf{minima} (zeros) of the intensity distribution pattern are given by the relation 
+
+\begin{equation}
+   a \sin{\theta_m} = \pm m \lambda  \quad\quad\quad \text{for    m  = 1, 2, 3,}\hdots,
+   \label{singleslit}
+\end{equation}
+
+where $\lambda$ is the wavelength of the incident light, $a$ is the width of the slit and $\theta_m$ is the angle corresponding to $m$th minimum. Here the $\pm$ refers to either side of the central spot ($\theta = 0$).
+
+
+\subsection*{The Double Slit}
+
+We can now imagine two single slits of the same width next to each other. Such an arrangement is called a double-slit aperture. We could think of this aperture (shown in Figure (\ref{fig:doubleslit})) as a combination of a single slit of width $d$, and a thin wire of width $a$. 
+
+This situation is slightly more complicated than the previous one; the thin obstacle of width $a$ will produce a diffraction pattern like the one in the previous section. However, the light from the two slits on either side will \textbf{interfere}, producing an overall interference pattern which also has its own maxima and minima! The mathematics of this is too difficult to understand right now; you will cover it in a later laboratory.
+
+The resultant intensity distribution is given by   
+
+\begin{equation}
+    I(\theta) = I(0) \cos^2\delta \left( \frac{\sin \beta}{\beta} \right)^2, \quad \quad  \beta = \frac{\pi a \sin \theta}{\lambda}, \quad \delta = \frac{\pi d \sin \theta}{\lambda}
+\end{equation}
+
+For a screen placed at a large distance $D$ from the wire, the positions of the minima on the screen are observed at 
+
+\begin{equation}
+    \begin{aligned}
+        x_{\pm n} = \pm n \frac{\lambda D}{a}, &\quad& \text{due to diffraction},\\
+        x_{\pm m} = \pm \left( m - \frac{1}{2}\right) \frac{\lambda D}{d}, &\quad& \text{due to interference}
+    \end{aligned}
+    \label{doubleslit}
+\end{equation}
+
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/doubleslit.png}
+    \caption{The diffraction pattern produced by a double-slit aperture is a combination of two patterns (diffraction due to a single wire and interference due to two slits).}
+    \label{fig:doubleslit}
+\end{figure}
+
+
+
+\begin{question}
+\paragraph{Question:} Look at the above condition for the fringes produced due to diffraction in Equation (\ref{doubleslit}). Is it different from the result obtained in the previous section (Equation (\ref{singleslit}))? If yes, why? If no, why not?~\\
+\paragraph{Question:} What is the ``complementary'' object to a double-slit?
+\end{question}
+
+
+
 \subsection*{Plane Diffraction Grating}
 
 A transmission diffraction grating consists of a large number of slits separated from one another by an opaque region. The grating concentrates the diffracted light along a particular direction in contrast to the single slit, which has a rather broad diffraction maximum. The maxima (bright intense spots) produced by a grating are usually called the principal maxima. They are quite intense and are also widely separated; what cannot be detected visually are the large number of secondary maxima which lie between neighbouring principal maxima.
 
-The expression, relating wavelength $\lambda$ of light used and the grating spacing $d$, with angle of deviation $\theta$ is,    
+The expression, relating wavelength $\lambda$ of light used and the grating spacing $d$, with angle of deviation $\theta$ is
 \begin{equation*}
     d \sin{\theta_m} = m \lambda,  \quad\quad\quad \text{for    m  = 1, 2, 3,}\hdots
 \end{equation*}
@@ -60,34 +166,8 @@ In the above expression, $m$ represents the order of \textbf{maxima} points and 
     \label{fig:grating}
 \end{figure}
 
-\subsection*{Single Slit}
 
-When a (monochromatic) beam of light such as a laser is incident on a narrow single slit, the light emerging from the slit shows a diffraction pattern on a screen. The distribution of the intensity of light received on a screen show a pattern of varying intensity consisting of a bright central maximum with alternate minima and maxima of decreasing intensity on either side, known as a \textit{Fraunhofer diffraction pattern}.
-
-The positions of the \textbf{minima} (zeros) of the intensity distribution pattern of a narrow slit due to a plane wave front (the Fraunhofer diffraction pattern) are given by the relation 
-
-\begin{equation*}
-    d \sin{\theta_m} = m \lambda  \quad\quad\quad \text{for    m  = 1, 2, 3,}\hdots,
-\end{equation*}
-
-where $\lambda$ is the wavelength of the incident light, $a$ is the width of the slit and $\theta_m$ is the angle corresponding to $m$th minimum. 
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/singleslit.png}
-    \caption{The diffraction pattern produced by a single-slit aperture.}
-    \label{fig:singleslit}
-\end{figure}
-
-\begin{figure}[!htb]
-    \centering
-    \includegraphics[width=0.75\textwidth]{figs/doubleslit.png}
-    \caption{The diffraction pattern produced by a double-slit aperture.}
-    \label{fig:doubleslit}
-\end{figure}
-
-
-\subsection*{Circular Aperture}
+\subsection*{The Circular Aperture}
 
 The diffraction pattern due to a circular aperture (known as an \textit{Airy diffraction pattern}) is similar to a single slit diffraction but the mathematics involved is more complicated which gives the expression nearly identical to that of the single slit. Hence we may apply the same expression to the diffraction due to a circular aperture, 
 
@@ -105,48 +185,6 @@ where $d$ is the diameter of the circular aperture and $\theta_m$ is the angle o
         m = 4 &\quad& \overline{m}=4.24\\
     \end{aligned}
 \end{equation*}
-
-\subsection*{Cylindrical wires}
-
- 
- Fig. 3(a) Single cylindrical wire                                Fig. 3(b) Two wires
-
-A laser beam of wavelength $\lambda$, falling normally on a cylindrical wire of diameter $a$ is diffracted in the direction perpendicular to the wire. The resulting intensity pattern as observed on a screen is shown in \ref{Fig. 3(a)}. It will not have escaped your attention that this pattern is very similar to that observed for a single slit. This is due to Babinet’s principle, which states that complementary objects produce the same diffraction pattern. The mathematics of this are far beyond the scope of this lab session.
-
-The intensity distribution as a function of angle $\theta$ with the incident direction is given by
-
-\begin{equation*}
-    I(\theta) = I(0) \left( \frac{\sin \beta}{\beta} \right)^2, \quad \quad  \beta = \frac{\pi a \sin \theta}{\lambda}
-\end{equation*}
-
-
-The central spot ($\beta = 0$ and $\sin\beta = 0$) is bright. For other angles, when $\sin\beta=0$ but $\beta \neq 0$, the intensity vanishes.
-
-Thus the intensity distribution has $n$th minimum at the angle $\theta_n$ given by
-
-\begin{equation*}
-    a \sin\theta_m = \pm m \lambda
-\end{equation*}
-
-Here the $\pm$ refers to either side of the central spot ($\theta = 0$).
-
-The diffraction pattern due to two parallel identical wires of width $a$ kept at a distance $d$ from each other (Fig. 3(b)) is a combination of two patterns (diffraction due to a single wire and interference due to two wires).
-
-The resultant intensity distribution is given by   
-
-\begin{equation}
-    I(\theta) = I(0) \cos^2\delta \left( \frac{\sin \beta}{\beta} \right)^2, \quad \quad  \beta = \frac{\pi a \sin \theta}{\lambda}, \delta = \frac{\pi d \sin \theta}{\lambda}
-\end{equation}
-
-For a screen placed at a large distance $D$ from the wire, the positions of the minima on the screen are observed at 
-
-\begin{equation*}
-    \begin{aligned}
-        x_{\pm n} = \pm n \frac{\lambda D}{a}, &\quad& \text{due to diffraction},\\
-        x_{\pm m} = \pm \left( m - \frac{1}{2}\right) \frac{\lambda D}{d}, &\quad& \text{due to interference}
-    \end{aligned}
-\end{equation*}
-
 
 \subsection*{Single and double helices:}
   
@@ -166,26 +204,39 @@ For a screen placed at a large distance $D$ from the wire, the positions of the 
         \end{subfigure}
 \end{figure}
 
-Now consider a set of four identical wires, the net intensity distribution is a combination of diffraction from each wire and interference due to pairs of wires and hence depends on $a$, $d$ and $s$ \ref{Figure 5 (a)}.
+Now consider a set of four identical wires, the net intensity distribution is a combination of diffraction from each wire and interference due to pairs of wires and hence depends on $a$, $d$ and $s$ (see Figure \ref{fig:fourwires}).
 
 In other words, the combination of three different intensity patterns is observed.
 
-  
 \begin{figure}[!htb]
     \centering
     \begin{subfigure}[b]{0.45\textwidth}
                 \centering
-                \includegraphics[width=0.75\textwidth]{figs/singlehelix.png}
-                \caption{Projection of a double helix}
-                \label{fig:doublehelixprojection}
+                \includegraphics[width=0.75\textwidth]{figs/fourwires.png}
+                \caption{Projection of four identical wires}
+                \label{fig:fourwires}
         \end{subfigure}%
         \begin{subfigure}[b]{0.45\textwidth}
                 \centering
-                \includegraphics[width=0.75\textwidth]{figs/doublehelix.png}
+                \includegraphics[width=0.75\textwidth]{figs/doublehelix-schema.png}
                 \caption{The double helix given in the sample.}
                 \label{fig:doublehelix2}
         \end{subfigure}
+        \caption{Diffraction patterns of obstacles with three length scales.}
 \end{figure}
+
+\section*{Description}
+
+In \textbf{Part A}, you will determine the wavelength of light of a laser using a set of diffraction gratings.
+
+In \textbf{Part B}, you will use the laser whose wavelength you have just determined to measure the width of a single slit.
+
+In \textbf{Part C}, you will study diffraction pattern of a circular aperture.
+
+In \textbf{Part D (\textit{optional})}, you will study the diffraction pattern of a single helix.
+
+In \textbf{Part E (\textit{optional})}, you will study the diffraction pattern of a double helix.
+
 
 \section*{Procedural Instructions}
 
@@ -193,57 +244,63 @@ In other words, the combination of three different intensity patterns is observe
 
 Observe effect of colour and also of white light on the diffraction pattern obtained by a suitable grating. Then choose an appropriate diffraction grating and perform the measurements to determine the wavelength $\lambda$ of the laser. 
 
-\paragraph{Question:} Estimate the error in the value of the wavelength of light.
+\begin{question}
+\paragraph{Question:} Estimate the error in the value of the wavelength of light.~\\
 
-\paragraph{Question:} What are the sources of error in the above-determined value of $\lambda$ ? What measures should be taken to minimize these errors? 
+\paragraph{Question:} What are the sources of error in the above-determined value of $\lambda$? What measures should be taken to minimise these errors? ~\\
 
-Tilt the grating at an angle and see how this affects the diffraction pattern.
+\paragraph{Question:} Tilt the grating at an angle. How does this affect the diffraction pattern?
+\end{question}
+
+Now repeat this procedure for different gratings (with different values of $d$), and calculate wavelength $\lambda$ as accurately as possible.
 
 \subsection*{Part B}
 
-Repeat Part A, for a different gratings (with different values of d), and calculate wavelength $\lambda$ as accurately as possible.
+Design and perform the necessary experiment with a single slit of fixed width and determine the width d of the given single slit.
+
+\begin{question}
+\paragraph{Question:} Tilt the slit at an angle. How does this affect the diffraction pattern?
+\end{question}
+
 
 \subsection*{Part C}
 
-Design and perform the necessary experiment with a single slit of fixed width and determine the width d of the given single slit.
-
-Tilt the slit at an angle and see how this affects the diffraction pattern.
+Now take the given circular aperture as the diffracting object and determine the diameter of the circular aperture.
 
 \subsection*{Part D}
 
-Now take the given circular aperture as the diffracting object and determine the diameter of the circular aperture.
+Study of the diffraction pattern due to a helical spring and determine pitch of the spring and thickness of its wire. 
+
+
+\begin{question}
+\paragraph{Question:} Can you explain the form of the diffraction pattern observed? Does this part of the experiment relate in any way to Part B? 
+\end{question}
 
 \subsection*{Part E}
 
-Study of the diffraction pattern due to a helical spring and determine pitch of the spring and thickness of its wire. 
+Study of the diffraction pattern due to a double helix (as in our DNA) and determine all its parameters, as shown in Figure (\ref{fig:doublehelix2}).
 
-\paragraph{Question:} How does this part of the experiment relate to Part C? Can you explain the form of the diffraction pattern observed?
-
-\subsection*{Part F}
-
-Study of the diffraction pattern due to a double helix (as in our DNA) and determine all its parameters \ref{Fig 5 (b)}
-
-
-\paragraph{Question} Explain how will be the diffraction pattern, observed using a laser source with
+\begin{question}
+\paragraph{Question} Describe the diffraction pattern obtained if you use a laser source to illuminate
 \begin{enumerate}[label=(\alph*)]
     \itemsep0em
     \item A fine wire mesh,
     \item A square aperture,
     \item A rectangular aperture.
 \end{enumerate}
-
+\end{question}
 
 
 
 \subsection*{Precautions}
 
 \begin{enumerate}
-    \item Never look directly at a laser beam with the naked eye or any optical device. It may damage the eye permanently.
-    \item Never allow a laser beam to shine in the area of anyone’s eye, as it is harmful to eyes.
+    \item Never look directly at a laser beam with the naked eye. It may damage the eye permanently.
+    \item Never point the laser at anyone else, for the same reason.
+    \item Never point an optical device at a laser beam. It could damage the internal sensors.
     \item Never place highly reflective objects (such as rings, watches, and glassware) in the path of the laser beam.
-    \item For proper working of laser, it should be kept ON throughout. Do not put it OFF until you complete all the readings, but if you do not need the laser beam for measurements or alignment, use the light-blocking screen to block the Laser beam.
-    \item Treat the laser source as any other electrical device. It should never be tampered with, while the power cord is connected.
-    
+    \item For proper working of laser, it should be kept on throughout. Do not put it off until you complete all your readings, but if you do not need the laser beam for measurements or alignment, use a light-blocking screen to block the  beam.
+    \item Treat the laser source as you would any other electrical device: It should never be tampered with while the power cord is connected.
 \end{enumerate}
 
 
