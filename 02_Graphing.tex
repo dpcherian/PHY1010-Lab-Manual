@@ -10,14 +10,14 @@
 
 Before you begin, read the \href{https://drive.google.com/open?id=1ZxYayhCt-y0VdKSYUTYUvRuKX6yZgWdD}{article on graphing by Christopher Deacon}. You don't need to grasp all the points in it right way, but as you grow in experience you will appreciate them.
 
-While we will show you how to use Python for elementary data analysis, the purpose of this lab is not to familiarise you to coding -- there is another course that does that. Everything here can alternatively be done using Microsoft Excel, so you have a choice of which software to use. 
+While we will show you how to use Python, the purpose of this lab is not to familiarise you to coding -- there is another course that does that. Everything here can alternatively be done using MS Excel.
 
 \begin{imp}
 As with the other Physics courses, we will be using \textbf{\href{https://jupyter.org}{Jupyter Notebook}} for coding in Python.  Go to the link and follow the instruction procedure to install \href{https://www.anaconda.com/downloads}{Anaconda}, a Python distribution that comes with Jupyter pre-installed. This installation takes a significant amount of time. As a result, you should get it done \textbf{before this session begins}. 
 \end{imp}
 
 \section{Graphing using a pencil and graph paper}
-Graphing, like many other scientific activities, begins with a set of questions: we wish to find something, in this case a pattern, and we would like to plot our graph in such as way as to see and show that pattern most effectively. Some of these patterns may already be obvious in the data, e.g. you must have noticed that the time period $T$ of the pendulum does not seem to depend on the mass $m$ of the bob. When you compare the columns for $T$ and the length $l$ of the pendulum, you see that $T$ increases with $l$, but not in the most obvious way. Finally, when you look at how (and whether) $T$ changes with the amplitude $\theta$ of the oscillation, the pattern is even less obvious. 
+Graphing, like many other scientific activities, begins with a set of questions: we wish to find something, in this case a pattern, and we would like to plot our graph in such as way as to see and show that pattern most effectively. Some of these patterns may already be obvious in the data, e.g. you must have noticed that the time period $T$ of the pendulum does not seem to depend on the mass $m$ of the bob. When you compare the columns for $T$ and the length $l$ of the pendulum, you see that $T$ increases with $l$, but not in the most obvious way. Finally, when you look at how (and whether) $T$ changes with the amplitude $\theta$ of the oscillation, you will see no obvious pattern, even though there is one hidden in the data. 
 
 \subsection{Plotting: Stage 1}
 Let us begin by exploring the variation of $T$ with respect to $m$ and with respect to $l$. We will consider the variation of $T$ with $\theta_\text{o}$ later. 
@@ -26,7 +26,7 @@ Let us begin by exploring the variation of $T$ with respect to $m$ and with resp
 \itemsep0em
     \item On a graph sheet, draw the $x$ and $y$ axes. The $x$ axis is normally used for the parameter that you control, sometimes called the independent parameter, and $y$ axis for the parameter that you observe, sometimes called the dependent parameter. For example, when you plot $T$ vs $m$, $T$ is along $y$ and $m$ along $x$. 
     
-    \item Along each axis, choose a range that (i) covers the values you use and observe, and (ii) uses a scale that assigns a reasonable value to each division of the grid. So far as possible use units that make the numbers for the variables (i) small and (ii) similar along both axes. (If you write the mass in $kg$ and the time in $s$, you will understand what \textit{not} to do.) 
+    \item Along each axis, choose a range that (i) covers the values you use and observe, and (ii) uses a scale that assigns a reasonable value to each division of the grid. So far as possible use units that make the numbers for the variables (i) small and (ii) similar along both axes. (If you write the mass in $kg$ and the time in $s$, you will understand what \textit{not} to do.)
     
     \item Plot the observed point, and then circle each point so that it visible. 
     
@@ -55,9 +55,9 @@ If $T^2$ depends linearly on $l$, $T$ must depend linearly on $\sqrt{l}$. This i
 
 When you were drawing the $T^2 - l$ and $\log T - \log l$ graphs you were essentially using your artistic sense, which allowed you to judge what the \textit{best} straight line is, i.e. the line that seems to best fit the points. Notice that the confidence with which you arrive, artistically, at the the best line depends on the scatter of the points about it. Thus, the greater the scatter, the less confident you are (or ought to be) of your artistic fit. It becomes imperative, therefore, to find an unambiguous, quantitative way of arriving at the best fit. 
 
-To do this we begin by understanding that a straight line is determined \textit{completely} by just two points. In other words, when we have more than two points, there is automatically an ambiguity about what constitutes the best line. (In mathematical language, the problem is \textit{over-determined}.) 
+To do this we begin by understanding that a straight line is determined \textit{completely} by just two points. In other words, when we have more than two points, there is no such thing as \textit{the} line that fits the points. In mathematical language, the problem is \textit{over-determined}. However, we can certainly ask what is the \textit{best} line, i.e. the one that is most representative of all the points, or, in some sense (yet to be defined) closest to them.
 
-To find the best line, we go back to the remark that a line is determined completely by two points. Another way of saying this is that a line is determined uniquely by two \textit{parameters} -- the slope $m$ and the $y$-intercept $c$. So when we have many points, we can think of a host of lines with different $m$s and $c$s. The question is: Which line is the best? To answer this question mathematically (rather than artistically) we need a quantitative measure of the \textbf{goodness of fit} of a line given more than two points. This measure of the goodness of fit must depend on $m$ and $c$, and the process of finding the best line is thus the process of \textit{optimisation} with respect to $m$ and $c$. The mathematics of this is a little advanced, but by the end of this semester you will be able to work it out. 
+To find the best line, we go back to the remark that a line is determined completely by two points. Another way of saying this is that a line is determined uniquely by two \textit{parameters} -- the slope $m$ and the $y$-intercept $c$. So when we have many points, we can think of a host of lines with different with a range of different $m$s and $c$s. The question is: Which line is the best? To answer this question mathematically (rather than artistically) we need a quantitative measure of the \textbf{goodness of fit} of a line given more than two points. This measure of the goodness of fit must depend on $m$ and $c$, and the process of finding the best line is thus the process of \textit{optimisation} with respect to $m$ and $c$. The mathematics of this is a little advanced, but by the end of this semester you will be able to work it out. 
 
 For the moment, you will allow the computer to use standard algorithms to find the best straight line for us. To do that, you have to learn how to get our computer to import the data we want to plot and use it in such a way as to find the best straight line. For that purpose we will first use Microsoft Excel and then Python. 
 
@@ -80,11 +80,13 @@ Let's begin with a sample data table verifying Ohm's law, shown in Table (\ref{t
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{|c|c|}
+\begin{tabular}{|C{4cm}|C{4cm}|}
 \hline
 \rowcolor{orange!25}
 \hline
-\multicolumn{2}{|l|}{Experiment $n$: \textbf{Verification of Ohm's Law for high resistance}}\\
+\multicolumn{2}{|l|}{Experiment $n$: }\\
+\rowcolor{orange!25}
+\multicolumn{2}{|l|}{\textbf{Verification of Ohm's Law for large resistance}}\\
 \hline
 \multicolumn{2}{|l|}{PC data, 29/01/2019 to 05/01/2019}\\
 \hline
@@ -93,16 +95,29 @@ Let's begin with a sample data table verifying Ohm's law, shown in Table (\ref{t
 \rowcolor{orange!50}
 \textbf{Voltage} {\color{black}(V)} & \textbf{Current} {\color{black}($\mu A$)}\\
 \hline
-3.06 & 3\\
-4.03 & 4\\
-6.61 & 6\\
-7.04 & 6\\
-8.99 & 9\\
-11.22& 11\\
-17.01& 16\\
+1&3\\
+2&5\\
+3&6\\
+4&7\\
+5&10\\
+6&13\\
+7&15\\
+8&16\\
+9&19\\
+10&20\\
+11&22\\
+12&24\\
+13&26\\
+14&29\\
+15&31\\
+16&33\\
+17&35\\
+18&36\\
+19&39\\
+20&41\\
  \hline
 \end{tabular}
-\caption{Sample data for verification of Ohm’s law for a high resistance.}
+\caption{Sample data for verification of Ohm’s law for a large resistance.}
 \label{table:ohm}
 \end{table}
 
@@ -114,7 +129,7 @@ Leave a few rows at the top of the spreadsheet for information about the data co
 
 \subsubsection{Plotting and Formatting your Graph}
 
-You are now ready to begin plotting this data. Begin by selecting both columns and \texttt{Insert} a \texttt{Chart}. When you are asked to select a \texttt{Chart Type}, select the \texttt{XY (Scatter)} option with points \textbf{only}. This is important: you might be tempted to `join the dots', but that would be misleading: especially if the graph is not linear! When you are done with this, label your axes (\textbf{including units!}): most spreadsheet software take the first column to be the $x$-values and the second the $y$-values, but this can be changed. Your graph should look something like Figure (\ref{fig:samplegraph1}). 
+You are now ready to begin plotting this data. Begin by selecting both columns and \texttt{Insert} a \texttt{Chart}. When you are asked to select a \texttt{Chart Type}, select the \texttt{XY (Scatter)} option with points \textbf{only}. This is important: you might be tempted to ”join the dots”, but that would be misleading: especially if the graph is not linear! When you are done with this, label your axes (\textbf{including units!}): most spreadsheet software take the first column to be the $x$-values and the second the $y$-values, but this can be changed. Your graph should look something like Figure (\ref{fig:samplegraph1}). 
 
 
 \begin{figure}[!htb]
@@ -153,7 +168,7 @@ Right-clicking the data-points, select \texttt{Add Trendline}. In the dialog box
 
 If your trendline equation looks something like this:
 \begin{center}
-    \texttt{f(x) = 0.950310374968518 x - 0.011427047596473}
+    \texttt{f(x) = 2.02556390977444 x + 0.231578947368423}
 \end{center}
 
 then edit it to round it off to a more reasonable number of digits. You will understand how many digits is reasonable in the next chapter on error analysis, for right now, let us choose to keep three decimal places. You should now have a graph that looks like Figure (\ref{fig:samplegraph3}).
@@ -161,7 +176,7 @@ then edit it to round it off to a more reasonable number of digits. You will und
 \begin{figure}[!htb]
     \centering
     \includegraphics[scale=0.8]{figs/samplegraph3.png}
-    \caption{Same graph as in Figure (\ref{fig:samplegraph1}), with formatted trendline.}
+    \caption{Same graph as in Figure (\ref{fig:samplegraph1}), with a formatted trendline.}
     \label{fig:samplegraph3}
 \end{figure}
 
@@ -169,11 +184,7 @@ then edit it to round it off to a more reasonable number of digits. You will und
 In Microsoft Excel, you can make the current graph style a `template', so that you don't have to keep making most of these changes every time you plot new data. To do this, right-click the chart, and select \texttt{Save as Template}. Choose an appropriate name for the chart template and save it. The chart template automatically appears in the \texttt{Templates} folder for charts. You can access it on the \texttt{All Charts} tab in the \texttt{Insert Chart} or \texttt{Change Chart Type} dialog box, where you can apply a chart template like any other chart type.
 \end{tip}
 
-
-
-
-
-
+%\includepdf[pages=1-]{02a_Graphing_with_Python.pdf}
 
 
 %\section{Apparatus}
