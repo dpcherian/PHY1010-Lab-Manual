@@ -54,21 +54,8 @@ In \textbf{Part C \textit{(optional)}}, you will use this data to determine the 
 
 
 \section*{Theory}
-The geometrical theory of the formation of rainbow requires knowledge of the manner in which a set of parallel rays is reflected and refracted by a spherical droplet of water. It is also the most familiar example of an optical phenomenon known as \textbf{dispersion}, where white light is split into its constituent colours. 
 
-We will be dealing with the propagation of light between different transparent materials. When light moves from one medium to another, it changes direction through a process known as \textit{refraction}. Thus, at least for the purposes of this experiment, we can characterise different transparent media by their refractive indices: a dimensionless number ($\mu$) which describes how much light bends when it enters the medium from vacuum. The relationships between the angles $\theta_1$ and $\theta_2$ (shown in Figure (\ref{fig:snells})) is given by the Sahl-Snell–Descartes law (usually called Snell's law):
-
- \begin{equation}
-    \mu_1 \sin{\theta_1}= \mu_2 \sin{\theta_2}.
-    \label{snell}
- \end{equation}
-
-%  or equivalently that,
- 
-%  \begin{equation}
-%      \theta_2 = \sin^{-1}\left(\frac{\mu_1}{\mu_2}\sin{\theta_1}\right)
-%      \label{rasfnofu}
-%  \end{equation}
+We will be dealing with the propagation of light between different transparent materials. When light moves from one medium to another, it changes direction through a process known as \textit{refraction}. Thus, at least for the purposes of this experiment, we can characterise different transparent media by their refractive indices: a dimensionless number ($\mu$) which describes how much light bends when it enters the medium from vacuum. 
 
 \begin{figure}[!htb]
 \captionsetup[subfigure]{justification=centering}
@@ -95,6 +82,13 @@ We will be dealing with the propagation of light between different transparent m
         \caption{The propagation of a ray of light between media of different refractive indices.}\label{fig:snells}
 \end{figure}
 
+
+The relationships between the angles $\theta_1$ and $\theta_2$ (shown in Figure (\ref{fig:snells})) is given by the Sahl-Snell–Descartes law (usually called Snell's law):
+
+ \begin{equation}
+    \mu_1 \sin{\theta_1}= \mu_2 \sin{\theta_2}.
+    \label{snell}
+ \end{equation}
 
 As light passes from a rarer to a denser medium (as shown in Figure (\ref{fig:rareToDense})), the ray of light bends \textit{towards} the normal, while as light travels from a denser to a rarer medium (Figure (\ref{fig:denseToRare})), the ray of light bends \textit{away} from the normal. When light moves from a denser to a rarer medium ($\mu_1>\mu_2>1$), there must be \textit{some} angle (let's call it $\theta_c$) greater than which the resulting refracted ray bends back inwards (Figure (\ref{fig:til})). This phenomenon, called \textbf{Total Internal Reflection}, plays a crucial role in the formation of the rainbow.
 
@@ -157,37 +151,33 @@ Let us thus imagine that only half the drop is illuminated (as will be done in t
     \label{fig:rainbowDeviation}
 \end{figure}
 
+
+
+We will thus observe the rainbow at the minimum value of $\phi_K$, which we can find by enforcing the condition\footnote{That this condition represents the case of minimum deviation is clear from the fact that if $\frac{\dd^2 \phi_K}{\dd i^2}$ is calculated, it is found to be positive.}  $$\frac{\dd\phi_K}{\dd i}=0.$$
+
 \begin{imp}
 The index of refraction -- which determines how much the rays are being bent on entering or leaving the drop -- is different for each colour,\footnote{You will understand why this is the case in a later course on optics.} and as a result, each colour has a different angle of minimum deviation, where the scattered light is most intense. The first-order rainbow can thus be found between 137.6 degrees (for red) and 139.4 degrees (for blue).
 \end{imp}
 
 \begin{figure}[!htb]
     \centering
-    \begin{subfigure}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[width=\textwidth]{figs/rainarc.png}
-    \end{subfigure}%
-    \begin{subfigure}[b]{0.5\linewidth}
-    \centering
-    \includegraphics[width=0.25\textwidth]{figs/multipleRainbowsLab.jpeg}
-    \end{subfigure}
-    \caption{Observing a rainbow in the sky.}
-    \label{fig:rainbow}
+    \includegraphics[width=0.5\textwidth]{figs/rainarc.png}
+    \caption{Angular position of the primary rainbow in the sky.}
+    \label{fig:rainbowSky}
 \end{figure}
+
 
 \begin{question}
 \paragraph{Question:} Suppose for a moment that the refractive index of materials \textbf{didn't} depend on the wavelength of light. In this case, rainbows would:
-
 \begin{enumerate}
 \itemsep0em
     \item Remain unchanged.
     \item Not be formed.
     \item Simply be a bright white band of light.
 \end{enumerate}
+
+\paragraph{Question:} Can you now explain where the $42^\circ$ comes from in Figure (\ref{fig:rainbowSky})?
 \end{question}
-
-We will thus observe the rainbow at the minimum value of $\phi_K$, which we can find by enforcing the condition\footnote{That this condition represents the case of minimum deviation is clear from the fact that if $\frac{\dd^2 \phi_K}{\dd i^2}$ is calculated, it is found to be positive.}  $$\frac{\dd\phi_K}{\dd i}=0.$$
-
 
 Differentiating Equation (\ref{mindevK}), we have
 
@@ -223,10 +213,10 @@ We can use  Equations (\ref{rasfnofu}) and (\ref{mindevK}) to relate the total d
  
  \begin{equation}
      \phi_K = 180K + 2i - 2(K+1)\sin^{-1}\left(\frac{\sin i}{\mu}\right)
+     \label{phiKi}
  \end{equation}
 
-
-In particular, for $K = 2$, one can show -- using Equations (\ref{}) and (\ref{}) -- that 
+In particular, for $K = 2$, one can show -- using Equations (\ref{phiKi}) and (\ref{iK}) -- that 
 
 \begin{equation}
    \cos\left( \frac{\phi_2}{6}\right) = \frac{1}{\mu}\left( 3 \cos\left(\frac{i + 180}{3}\right) \cos{i} + \sin\left(\frac{i + 180}{3}\right)\sin{i} \right)
@@ -250,7 +240,20 @@ Hence, we have
 \end{equation}
  
  
- 
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=\textwidth]{figs/multipleRainbows.jpeg}
+    \end{subfigure}%
+    \begin{subfigure}[b]{0.5\linewidth}
+    \centering
+    \includegraphics[width=0.75\textwidth]{figs/multipleRainbowsLab.jpeg}
+    \end{subfigure}
+    \caption{Rainbows represented as they would appear in the sky (\textit{left}) and in this experiment (\textit{right}), relative to the incident beam of light. \texttt{Source:[1]}}
+    \label{fig:rainbow}
+\end{figure}
+
  
 \section*{Experimental Setup}
 
@@ -330,10 +333,10 @@ Determine the value of $\mu$ for the liquid $A$ by measuring the deviation and e
 
 \section*{References}
 \begin{enumerate}
-\item Jearl D. Walker, Multiple rainbows from single drops of water and other liquids, Am. J. Phys, 44 (5), 1976, pp. 421-433.
-\item Kenneth Sassen, Angular scattering and rainbow formation in pendant drops, J. Opt. Soc. Am., 69 (8), 1979, pp. 1083-1098. 
-\item John Beynon, Introductory University Optics, Prentice-Hall of India Pvt. Ltd., New Delhi, 1998, pp. 44-55.
-\item Francis W. Sears, Optics, Asian Publishing House (India), 1958, pp. 54-55. 
+\item Jearl D. Walker, \textit{Multiple rainbows from single drops of water and other liquids}, Am. J. Phys, 44 (5), 1976, pp. 421-433.
+\item Kenneth Sassen, \textit{Angular scattering and rainbow formation in pendant drops}, J. Opt. Soc. Am., 69 (8), 1979, pp. 1083-1098. 
+\item John Beynon, \textit{Introductory University Optics}, Prentice-Hall of India Pvt. Ltd., New Delhi, 1998, pp. 44-55.
+\item Francis W. Sears, \textit{Optics}, Asian Publishing House (India), 1958, pp. 54-55. 
 
 \end{enumerate}
 

@@ -22,7 +22,7 @@
 \section*{Apparatus}
 
 \begin{enumerate}
-\item A black box with three connecting terminals marked A, B and C
+\item A black box with three connecting terminals marked $A$, $B$, and $C$
 \item A variable DC power supply (\textit{Keltronix})
 \item Two digital multimeters (\textit{MECO 603})
 \item A signal generator (\textit{Testronix 72})
@@ -36,9 +36,23 @@
 
 \section*{Introduction}
 
-You are given a sealed box on which three terminals marked A, B and C are provided which connect to a circuit inside. The circuit inside the box consists of \textbf{three} electronic components of different kinds (i.e. resistors, p-n junction diodes, batteries, etc.). Please note that the black box may consist of combinations of either only one or only two or all three types of components. 
+You are given a sealed box with three terminals marked $A$, $B$, and $C$ which connect to a circuit inside. This circuit consists of \textbf{three} electronic components of different kinds, arranged randomly between the three terminals. The components may be connected in either a `star' or `delta' connection (refer to the theory section for details). You are expected to identify each component's type, value, and orientation with respect to the terminals. 
 
-The components may be connected in either a `star' or `delta' connection (refer to the theory section for details). You are expected to identify the interior components as to type and value, and determine how they are connected to each other and to the terminals. 
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.3]{figs/bb.png}
+    \caption{Different configurations possible within a blackbox: it will be specified if the box contains a star (\textit{left}) or delta (\textit{right}) connection.  Do not attempt to open the box! }
+    \label{fig:bb}
+\end{figure}
+
+\begin{imp}
+
+You will be told beforehand if the connection is `star' or `delta' as you cannot distinguish them otherwise.~\\
+
+The black box will always contain \textbf{three} electronic components, but they need not all be distinct. Some components may be repeated; a black box may be composed of (i) three resistors, (ii) two resistors and a diode, (iii) a battery and two diodes, and so on. Each arm (see Figure (\ref{fig:bb})) may contain anything from all to none of the components.
+\end{imp}
+
 
 
 \section*{Description}
@@ -113,6 +127,7 @@ C &= \frac{P Q + Q R + R P}{P}\\
 \end{minipage}
 
 
+
 \subsection*{Passive circuit components}
 
 Passive circuit components are electrical components that cannot control the current in a circuit. They do not generate power, but instead dissipate, store, and/or release it. Some such components are discussed below.
@@ -164,7 +179,7 @@ Unlike a resistor, a diode does not behave linearly with respect to the applied 
 
 
 \subsection*{Black Box}
-The black box contains an unknown circuit inside it which is connected to terminals A, B, and C in either a `star' or a `delta' connection (explained above). You have to use these for your analysis and measurements. Do not try to open the given black box.
+The black boxes (as shown in Figure (\ref{fig:bb})) contain an unknown circuit inside, connected to terminals $A$, $B$, and $C$ in either a `star' or a `delta' connection (explained above). You have to use these for your analysis and measurements. Do not try to open the given black box.
 
 \subsection*{Digital Multimeter (\textit{MECO 603})}
 
@@ -181,12 +196,11 @@ The DC Variable Power Supply can either act as a source of Constant Current (CC)
 A function generator is a type of signal generator that is used to generate simple repetitive waveforms in the form of an alternating electrical wave. Typically, it will produce waveforms or functions such as sine waves, sawtooth waveforms, square, and triangular waveforms, and will allow you to adjust the frequency and amplitude of  the signals. The instrument given to you generates sine and square waveforms. The output may be taken from the output sockets for the respective waveforms. The frequency can be adjusted by turning the dial and selecting the appropriate Frequency Multiplier button. For example, turning the dial to 3 and selecting the 10k button would provide an output waveform with a frequency of 30kHz. Similarly the amplitude switch, used in conjunction with the appropriate buttons, can be used to adjust the amplitude of the output waveform from under 0V to 30V.
 
 
-
 \subsection*{Warnings}
 
 \begin{enumerate}
 \item The use of a multimeter to measure the resistance is strictly prohibited.
-\item Do not try to open the black box, use only terminals A, B and C for the connections.
+\item Do not try to open the black box, use only terminals $A$, $B$, and $C$ for the connections.
 \item Use fixed value resistors to prevent large currents in the circuit. The current should not exceed 500 mA.
 \item \textbf{Do not} short the outputs of the power supply, it could damage the equipment.
 \item Passing more current through the multimeter's (250 mA or 20A) sockets than they can handle will cause the fuses in the multimeter to burn out, leading to an open circuit. Use an appropriate resistance to limit the current in the circuit.
@@ -198,7 +212,18 @@ A function generator is a type of signal generator that is used to generate simp
 
 \section*{Procedural Instructions}
 
-Design the most appropriate method to identify the circuit and determine the values of the electronic components used  in it. Give your answer in the form of a circuit diagram showing the terminals A, B, and C clearly. You will need to give \textit{all} the information required in order to reconstruct the circuit. For example, if you are doing Part A, you will need to determine the values of the resistors, the orientation of the diodes, and the voltage and orientation of the battery, if any of the above are used in the circuit.
+Design the most appropriate method to identify the circuit and determine the values of the electronic components used  in it. Give your answer in the form of a circuit diagram showing the terminals $A$, $B$, and $C$ clearly. 
+
+\begin{question}
+\paragraph{Question:} Since not all of the elements will necessarily be present in a box, which is the first element you will test for?~\\
+
+\paragraph{Question:} How could you tell which way a diode was oriented? ~\\
+
+\paragraph{Question:} How would you differentiate between a diode and a resistor?
+\end{question}
+
+
+You will need to give \textit{all} the information required in order to reconstruct the circuit. For example, if you are doing Part A, you will need to determine the values of the resistors, the orientation of the diodes, and the voltage and orientation of the battery, if any of the above are used in the circuit.
 
 In every part, clearly report the procedural steps you have taken with reference to your complete plan of experiment, the data will you collect, how the collected data will be analysed and finally the interpretation of your analysis. Your reporting should be comprehensive, and you are expected to mention all important procedural steps in your answer sheet.
 
