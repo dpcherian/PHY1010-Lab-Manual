@@ -18,7 +18,237 @@ end free i.e. zero mass attached.
 oscillations of the spring with both the ends fixed.
 \end{enumerate}
 
-\section*{Apparatus}
+\section*{Introduction}
+
+Springs are familiar objects with many everyday applications ranging from retractable ballpoint pens, to weighing scales and metro handles. Let us consider an ideal spring: such a spring has an equilibrium length -- that is, a length when no external force is applied -- and resists any change to this length through a restoring force.
+
+%\todo[inline]{Diagram showing forces and springs.}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.4\textwidth]{figs/springForce.png}
+    \caption{The restoring force experienced by the mass due to the spring is proportional to the amount the spring is stretched from its equilibrium position.}
+    \label{fig:springForces}
+\end{figure}
+
+In such ideal springs, the force required to stretch (or compress) is assumed to be proportional to the amount which the spring is stretched (with compression being negative stretching). When one end is fixed, then this stretch is just the displacement of the free end. From now on we will assume that one end is fixed (which implies that we must use the formulas carefully when both ends are free). This tells us that the restoring force i.e.\ $F \propto x$. By defining a constant of proportionality $k$, known as the spring constant, we can write down \textit{Hooke's Law}:
+
+\begin{equation}
+    F = - k x,
+    \label{hooke}
+\end{equation}
+
+where the negative sign shows that the force is in the direction opposite to the displacement of the end, i.e.\ it is a restoring force: when the spring is stretched, this force tends to compress it, and vice versa. Experiment reveals that for relatively small displacements, almost all \textit{real} springs obey Equation (\ref{hooke}).
+
+Let us assume that the spring is placed horizontally on a frictionless surface and attached to a wall on one end and an object of some mass $M$ on the other, which we can pull or push. If we displace the object by some $x$ and let go, it will experience a restoring force due to the spring, which will change as the object begins moving. Combining Newton's Second Law and Equation (\ref{hooke}) we can see that the acceleration of the object is given by
+
+\begin{equation}
+\begin{aligned}
+    a &= \frac{F}{M} \\
+    \dv[2]{x}{t}&=-\frac{k}{M} x
+\end{aligned}
+\label{diffEqnSimpleSpring}
+\end{equation}
+
+where we have chosen $x = 0$ as the equilibrium position of the mass (in which the spring has its unstretched, or equilibrium, length).
+
+%\todo[inline]{Diagram showing horizontal oscillations.}
+
+It is not difficult to see that any function whose second derivative is itself (times a negative constant) is a solution to the differential equation above. Both $\sin (\omega t)$ and $\cos (\omega t)$ are such functions. From the theory of differential equations, we know that the general solution to this differential equation is a linear combination of two linearly independent solutions. Thus we can write
+
+\begin{equation*}
+    x(t) = A \sin(\omega t) + B \cos(\omega t),
+\end{equation*}
+
+where $\omega$ -- known as the frequency of vibration -- must be equal to $\sqrt{k/M}$ for the left and right sides to match, and $A$ and $B$ are constants determined by the initial conditions (initial position and initial velocity). Observing the solution above, it should be clear to you (since $\sin$ and $\cos$ are periodic functions) that there must be some time $T$ after which $x(t)$ comes back to itself, i.e.\ $x(t+T) = x(t)$. The motion is thus periodic, with period equal to that of the sinusoidal functions $\sin(\omega t)$ and $\cos(\omega t)$, which is
+
+\begin{equation}
+    T = \frac{2 \pi}{\omega} = 2\pi \sqrt{\frac{M}{k}}.
+    \label{masslessTime}
+\end{equation}
+
+The mass thus oscillates about its equilibrium position with a time period $T$ that is -- at least for small amplitudes -- independent of amplitude.
+
+%\todo[inline]{Diagram showing twice the mass and twice the displacement under gravity.}
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.3\textwidth]{figs/springMassVertical.png}
+    \caption{Hanging vertically, if a mass $m$ causes the spring to extend to $y_0$, a mass of $2m$ will cause the same spring to extend to $2 y_0$.}
+    \label{fig:springMassVertical}
+\end{figure}
+
+
+We could now imagine hanging the spring and mass vertically. While the spring is assumed to be massless (as it is ideal), the massive object experiences a downward force due to gravity of $Mg$. At static equilibrium, the spring would have displaced enough to balance this force. Thus,
+
+\begin{equation}
+    y_0 = \frac{Mg}{k}.
+    \label{masslessExt}
+\end{equation}
+
+We could similarly gently displace this spring vertically about this position, and we would again see oscillations, only this time the oscillations will be about the point $y_0$, which is the new equilibrium point.
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=\textwidth]{figs/springOscillations.png}
+    \caption{If the vertically hanging spring is displaced slightly, it will begin to oscillate with a time period $T$ about the new equilibrium point $y_0$, as shown.}
+    \label{fig:springOscillations}
+\end{figure}
+
+
+\begin{question}
+\paragraph{Question:} Write out Newton's Law as a differential equation in this case (i.e.\ when gravity is included). Show that it can be written as:
+
+\begin{equation*}
+    \dv[2]{y}{t} = -\omega^2 (y - y_0) 
+\end{equation*}
+
+\paragraph{Question:} By making a suitable substitution and comparing it with Equation (\ref{diffEqnSimpleSpring}), show that the solutions have the same form in a shifted variable.
+
+\paragraph{Question:} Show that the time period $T$ is the same as in the preceding case (of ``static'' equilibrium).
+\end{question}
+
+
+\subsection*{Massive springs}
+
+So far, we have assumed our spring to be ``massless'', in that its mass may be neglected. Whether or not this is a reasonable assumption does not depend on the spring alone, but on external factors. 
+
+On inspection, it should be clear to you that the top and the bottom of a spring hung vertically do not experience the same downward or restoring forces, even at static equilibrium.\footnote{In general, a spring is not a ``rigid'' body.} If this ``droop'' (caused by the mass of he spring) is negligible compared to the stretch caused by external masses, then the spring may be effectively considered as massless. Thus it depends roughly on the ratio of the masses.
+
+
+\subsubsection*{The static case}
+
+Let us consider a point very close to the top of the spring: it will experience a (small) restoring force from the small amount of spring above it, and a much larger downward force from the mass of spring under it. Similarly, consider a point very close to the free end of the spring: it will experience a larger restoring force (as there is more ``spring'' above it) than downward gravitational force as there is very little mass under it. As a result, the spring does not stretch uniformly; the coils near the top are further separated than those near the bottom. We would thus expect some form of ``correction factor'' to the mass term in Equation (\ref{masslessExt}).
+
+Consider a spring with some mass $m_s$. Let $L_0$ be the length of the spring when it is kept horizontally with no forces extending it, and $L_M$ be the length of spring when it is hung vertically with a mass $M$ attached to its lower end. We can define the ``equilibrium extension'' $S_M$ as
+
+\begin{equation}
+S_M = L_M - L_0.
+\end{equation}
+
+It is possible to solve the problem theoretically and show that the massive spring acts effectively like an ideal spring with a mass $m_s/2$ attached to its end. In other words, if a massive spring is hung vertically, and an ideal spring with mass $m_s/2$ is attached to its end, they will both extend to the same distance.
+
+Thus, Equation (\ref{masslessExt}) is modified to
+
+\begin{equation}
+S_M = \left( M + \frac{m_s}{2} \right)\left(\frac{g}{k} \right)
+\label{Sm}
+\end{equation}
+
+where the factor $m_s/2$ is known as the \textbf{static} mass correction factor.
+
+
+\subsubsection*{The dynamic case}
+
+Consider now the case of an ideal spring oscillating with a mass attached at its end. The oscillating mass $M$ will have a kinetic energy 
+
+\begin{equation*}
+    K_\text{mass} = \frac{1}{2} M v^2
+\end{equation*}
+
+However, if the spring itself is massive, since different parts of it move at different velocities, it will also have some kinetic energy associated with it. To find the total kinetic energy of the spring, one could imagine an infinitesimal mass element on the spring moving at some velocity and integrate its contribution to the kinetic energy to get the total energy:\footnote{Though this is slightly advanced, it is not too difficult to do at your level. We urge you to attempt to show this theoretically.}
+
+\begin{equation}
+    K_\text{spring} = \frac{1}{6} m_s v^2
+\end{equation}
+
+\begin{imp}
+This also explains why the spring oscillates even when it has no external mass attached.
+\end{imp}
+
+\begin{question}
+\paragraph{Question:} Show, from the earlier expressions for kinetic energy, that the spring behaves like an ideal spring with a mass of $m_s/3$ attached to it.
+\end{question}
+
+Thus, when an external mass $M$ is attached to the spring, it behaves as if it is effectively an ideal spring with a mass $M+ m_s/3$ attached to its end. Thus, Equation (\ref{masslessTime}) will need to be modified.
+
+The resulting time period $T$ for the oscillations of a massive spring is given by 
+
+\begin{equation}
+T = 2\pi \sqrt{\cfrac{\left(M + \cfrac{m_s}{3}\right)}{k}}.
+\label{Tm}
+\end{equation}
+
+The factor $m_s/3$ is the \textbf{dynamic} mass correction factor. 
+
+\begin{imp}
+Note that this factor is different from the mass correction factor in the previous (static) case. The reason for this difference is that they arise from two different processes. In the first case, the effective mass comes from the fact that the different mass-elements comprising the spring experience different forces, which affects the effective \textit{extension}. In the dynamic case where these different mass-elements are \textit{moving}, the term $m_s/3$ comes from the fact that they have different velocities, which affects the effective \textit{kinetic energy}.
+
+%\todo[inline]{Could still use some work.}
+\end{imp}
+
+\begin{question}
+\paragraph{Question:} Show that if the mass $M$ that is attached is too large compared to $m_s$, Equations (\ref{Sm}) and (\ref{Tm}) give the same results as for an ideal spring. 
+\end{question}
+
+
+When no additional mass is attached to the spring (i.e.\ $M=0$), we can define a corresponding frequency for the massive spring  
+
+\begin{equation}
+    f_0 = \frac{1}{T} = \frac{1}{2\pi} \sqrt{\frac{3k}{m_s}}.
+\end{equation}
+
+
+\subsubsection*{Standing waves on a massive spring}
+
+If we stretch the spring between two fixed points, it can be considered as a system with a uniform mass density (say, number of rungs per centimetre). When vibrated with some periodic forcing, this system has its own natural frequencies, very much like sound waves in a hollow pipe closed at both ends.\footnote{The pipe being ``closed'' implies that the amplitude of the waves at both ends is zero. In this case, the top end of the spring is fixed, and the bottom end moves at an amplitude so small compared to the length of the spring, that it can effectively be considered to be fixed.}
+
+\begin{figure}[!htb]
+    \centering
+    \begin{subfigure}[b]{0.5\textwidth}
+        \centering
+\includegraphics[width=0.8\textwidth]{figs/wavesInAHalfOpenPipe.png}
+                \caption{Waves on a pipe with one closed and one open end.}
+                \label{fig:wavesInAHalfOpenPipe}
+        \end{subfigure}\hfill
+        \begin{subfigure}[b]{0.5\textwidth}
+        \centering
+                \includegraphics[width=0.8\textwidth]{figs/wavesInAClosedPipe.png}
+                \caption{Waves on a pipe with both ends closed.}
+                \label{fig:wavesInAClosedPipe}
+        \end{subfigure}
+    \caption{Variation of amplitude in an air column: Sound waves are characterised by a series of alternate compressions and rarefactions. When an end is closed, the air particles there do not move, and thus that point is a node. Conversely, when the end is open, the particles have the maximum amplitude, and so that point is an antinode.}
+    \label{fig:wavesInAPipe}
+\end{figure}
+
+
+When this system is vibrated at one of these ``natural'' frequencies, standing (longitudinal) waves are seen to form, with clear nodes -- i.e.\ points on the spring that remain completely stationary. Two important points can be noticed about the nodes in this case:
+
+\begin{enumerate}[label=(\alph*)]
+    \item They divide the length of the spring into equal parts.
+    \item They increase by 1 as you move from one natural frequency to the next.
+\end{enumerate}
+
+\begin{question}
+\paragraph{Question:} Drawing out a diagram like Figure (\ref{fig:wavesInAPipe}), show that the wavelength of a wave with $n$ nodes is given by
+
+\begin{equation}
+    \lambda_n = \left(\frac{2}{n+1}\right) L , \quad \quad n=0,1,2\hdots
+\end{equation}
+where $L$ is the length of the column and $n$ the number of nodes (excluding the fixed endpoints).
+\end{question}
+
+
+We know that waves satisfy the following equation that relates their wavelengths and frequencies, 
+
+\begin{equation}
+    v = f_n \lambda_n
+\end{equation}
+
+where $v$ is the velocity of the wave. As this is a constant for a configuration, it follows that 
+
+\begin{equation}
+\begin{aligned}
+f_n = \frac{v}{\lambda_n} &= \frac{v (n+1)}{2L}\\
+f_1 = \frac{v}{2L}, \quad f_2 = \frac{v}{L},\quad &\hdots,\quad f_n = n f_1.
+\end{aligned}
+\end{equation}
+
+
+
+\section*{Experimental Setup}
+
+\subsection*{Apparatus}
 
 \begin{enumerate}[label=\arabic*)]
 \itemsep0em
@@ -34,103 +264,59 @@ oscillations of the spring with both the ends fixed.
 \item A set of measuring scales (1.0 m, 0.6 m and 0.3 m)
 \end{enumerate}
 
-\section*{Introduction}
+\subsection*{Description}
 
-A spring is a flexible elastic device which stores potential energy by the straining of the bonds between the atoms of the elastic material of which it is made. A variety of springs are available which are designed and fabricated to suit the various mechanical systems. Some common types of springs are compression springs, extension springs and torsion springs. 
+\begin{description}
 
-Robert Hooke, a 17th century physicist, studied the behaviour of springs under different loads. He established an equation, now known as Hooke’s law of elasticity which states that the amount by which a material body is deformed (the \textit{strain}) is linearly proportional to the force causing the deformation (the \textit{stress}). When applied to a spring, Hooke’s law implies that the restoring force is linearly proportional to the equilibrium extension. In other words,  $$F = - k x,$$ where $F$ is the restoring force exerted by the spring, $x$ is the displacement from the equilibrium position and $k$ is called the spring constant.\footnote{The negative sign indicates that the force $F$ is opposite in direction to the extension $x$, hence the term `restoring'.} For this equation to be valid, $x$ needs to be below the elastic limit of the spring. If $x$ is more than the elastic limit, the spring will exhibit `plastic behaviour', where the atomic bonds in the material of the spring get broken or rearranged and the spring no longer returns to its original state. It may be noted that the potential energy $U$ stored in a spring is given by $$U= \frac{1}{2} k x^2$$
+\item[Digital Multimeter (\textit{Victor VC97})]
 
-Depending on the value of the spring constant, a spring can be called \textit{soft} or \textit{hard}. A spring may also be considered to be massless or massive, depending on the mass that needs to be attached to it to get a considerable extension in the spring. Sometimes springs are also categorised by the ratio of spring constant to the mass of the spring $(\nicefrac{k}{m_s})$. A soft massive spring has a low spring constant and its mass cannot be neglected. 
+A multimeter is an instrument used to measure multiple parameters like voltage, current, and resistance. You will be using the multimeter to measure the frequency of the signal. You will have to use input sockets marked COM, V/$\Omega$ to do this. Note that the two input sockets marked mA and 10A are for the current measurement. You will not be using those. Connect the banana cables to COM and V/$\Omega$, and select the Hz setting on the multimeter. 
 
-Ideal springs are considered to be massless. Hung vertically without any mass attached, an ideal spring shows no extension. Similarly, with an attached mass $M$ the spring is found to oscillate with a characteristic time period $$T = 2\pi \sqrt{\frac{M}{k}}$$ Practically (for example in the determination of its spring constant), we usually neglect the mass of the spring. However, if the spring extends under its own weight, its mass cannot be neglected and therefore the extension requires a correction. Similarly, they oscillate without any attached mass, implying that the standard formula for the time period of oscillations of a spring needs modification. The corrected formulae have been worked out and, interestingly, one finds that the correction factors $m_\text{corr}$ due to the spring's mass $m_s$ in these two cases are not the same. In this problem, we will experimentally study and verify the modified formulae. 
+\item[Signal Generator]
 
-An extended soft massive spring clamped at both the ends can be assumed to be a uniformly distributed mass system. It has its own natural frequencies of oscillations (corresponding to different normal modes) like a hollow pipe closed at both the ends. Using the method of resonance we will excite and study different normal modes of vibrations of the spring. Here the longitudinal stationary waves will be set up on the extended soft massive spring. 
+A signal generator is used to generate simple repetitive waveforms in the form of an alternating electrical wave. Typically, it will produce simple waveforms like sine, square, and triangular waves, and will allow you to adjust the frequency and amplitude of these signals. The instrument given to you generates sine, sawtooth, and square waveforms. The output may be taken from the respective output sockets through banana cables. The frequency can be adjusted by turning the frequency dial and turning the Range knob to the appropriate multiplier. For example, turning the dial to 3 and selecting the 100X setting in the range knob would provide an output waveform with a frequency of 300Hz. Similarly the amplitude knob varies the amplitude of the output waveform.
 
-\section*{Description}
+\begin{tip}
+The DC Offset button makes the signal oscillate about a constant non-zero DC voltage (instead of zero). Normally, this shouldn't affect the working of the setup. However, when a multimeter is connected to it to measure frequency, it will not be able to do so, as it is calibrated to measure signals alternating about zero.
+\end{tip}
 
-In \textbf{Part A}, we will use the static method, where the equilibrium extension of a given spring will be measured for different attached masses and the spring constant and the mass correction factor will be determined. 
+\item[Mechanical Vibrator]
 
-In \textbf{Part B}, we will use the dynamic method, where different masses will be attached to the lower end of the spring with its upper end fixed and corresponding time period of oscillations for such a spring-mass system will be measured. The frequency of oscillations of the spring with the upper end fixed and the lower end free (i.e. with no attached mass) will be determined graphically. 
-
-In \textbf{Part C}, we will use a mechanical vibrator to force oscillations on the spring and excite different normal modes of vibrations of the spring. Thus the longitudinal stationary waves will be set up on the spring. We will measure the frequencies of the excitations corresponding to different normal modes. From these, the fundamental frequency of oscillation with both the ends fixed will be determined. We will compare this frequency with the frequency of oscillations with one end fixed and the other end free as determined earlier in Part B.
-
-
-
-\section*{Theory}
-
-\subsection*{Part A}
-
-Let $L_0$ be the length of the spring when the spring is kept horizontal under no tension, $m$ be the mass attached to the free end of the spring, $L_m$ be the length of the spring when the mass is attached at its lower end, $S_m$ be the equilibrium extension of the spring for mass $m$, $m_s$ be the mass of the spring, $k$ be the spring constant and $g$ be the acceleration due to gravity.
-
-Thus,
-
-\begin{equation}
-S_m = L_m - L_0
-\end{equation}
-
-We can determine the expression for $S_m$, by taking extension of a small element and integrating over the total length of the spring,
-
-\begin{equation}
-S_m = \left( m + \frac{m_s}{2} \right)\left(\frac{g}{k} \right)
-\end{equation}
-
-The factor $(\nicefrac{m_s}{2})$ is the mass correction factor in the \textbf{static} case.
+The mechanical vibrator converts the electrical signals from the signal generator into mechanical vibrations, similar to how a speaker works. When using the spring as a uniform mass distribution, it should be clamped at one end of the stand, and its lower end should be clamped to the crocodile clip fixed on the vibrator. This end will be subjected to an up and down harmonic motion which will constitute the ``forcing'' of the spring. It must be ensured that the amplitude of this motion is small enough so that these ends could be considered to be fixed.
 
 
-\subsection*{Part B}
-In case of the soft massive springs, we cannot neglect the mass of the spring since these springs can oscillate without any attached mass. We thus need to modify the earlier expression for $T$. This can be done using the principle of conservation of energy, $$\text{Potential Energy + Kinetic Energy = constant.}$$
+\item[Power Amplifier]
 
-The modified expression is found to be
+The Power Amplifier is used to amplify the signals from the signal generator before it is sent to the mechanical vibrator. The reason for this is two-fold: the signal itself is not sufficiently strong, and even if it were, there is a risk that a signal with a large amplitude could damage the mechanical vibrator. In order to prevent this, the amplifier has been equipped with two fuses to protect the vibrator.
 
-\begin{equation}
-T = 2\pi \sqrt{\cfrac{\left(m + \cfrac{m_s}{3}\right)}{k}}
-\end{equation}
-
-The factor $(\nicefrac{m_s}{3})$ is the mass correction factor in the \textbf{dynamic} case. Note that this factor is different from the mass correction factor in the previous (static) case.
-
-The corresponding frequency is given by $$f_0 = \frac{1}{T}.$$
+\end{description}
 
 
-\subsection*{Part C}
 
-As mentioned earlier, the extended spring has its own natural frequencies like a hollow pipe closed at both the ends. Note that both the ends of the spring may be taken to be fixed in the case in question: the upper end is fixed in any case and the amplitude of the lower end is small, as compared to the extended length of the spring, and can be taken to be nearly zero. The natural frequencies correspond to stationary waves; their wavelengths are given by 
 
-\begin{equation*}
-\lambda_n = \left( \frac{2}{n}\right) L , \quad \quad n=1,2,3\hdots
-\end{equation*}
 
-We know that the speed $v$ of the waves on the spring follow the equation $$v = f_n \lambda_n$$ Thus,
-
-\begin{equation}
-\begin{aligned}
-f_n = \frac{v}{\lambda_n} &= \frac{v n}{2L}\\
-f_1 = \frac{v}{2L}, \quad f_2 = \frac{v}{L},\quad &\hdots,\quad f_n = n f_1
-\end{aligned}
-\end{equation}
-
-\section*{Experimental Setup}
-
-For Parts A and B, you will need a soft massive spring, a retort stand with a clamp, a set of
-masses, a measuring tape or scales and a digital stopwatch. For Part C, you will need a soft massive spring, a long and heavy retort stand with a clamp at the top and a mechanical vibrator clamped near the base of the stand. We will also need a function generator. In this case, the soft massive spring should be clamped at the upper end of the stand. The lower end of the spring should be clamped to the crocodile clip fixed at the centre of the mechanical vibrator. The lower end of the spring will be subjected to an up and down harmonic motion using the mechanical vibrator. It must be ensured that the amplitude of this motion is small enough so that these ends could be considered to be fixed.
-
-\subsection*{Warnings}
+\subsection*{Precautions}
 
 \begin{itemize}
-\item Do not extend the spring beyond the elastic limit. Choose the value of the maximum mass that may be attached to the lower end of the given spring carefully.
+\item Don't overload the spring or you will stretch it beyond its elastic limit and damage it.
 \item Keep the amplitude of oscillations of the spring-mass system just sufficient to get the required number of oscillations.
-\item The amplitude of vibrations should be carefully adjusted to the required level using the amplitude knob of the function generator so as to not blow the fuse in the power amplifier. The brighter and more frequently the indicator LEDs flash indicates that the fuse is close to blowing.
+\item The amplitude of vibrations should be carefully adjusted to the required level using the amplitude knob of the signal generator so as to not blow the fuse in the power amplifier. The brighter and more frequently the indicator LEDs flash, the closer the fuse is to blowing.
 \end{itemize}
 
-\section*{Procedural Instructions}
+\section*{Procedure}
 
 \subsection*{Part A}
+
+In this part, you will use the static method to determine the spring constant of a massive spring, by measuring the equilibrium extension of a given spring for different attached masses.
+
 \begin{enumerate}
 \item Measure the length $L_0$ of the spring keeping it horizontal on a table in an unstretched (all the coils touching each other) position.
 \item Hang the spring to the clamp fixed to the top end of the retort stand. The spring extends under its own weight.
 \item Take appropriate masses and attach them to the lower end of the spring. 
-\item Measure the length $L_m$ of the spring in each case. (For better results you may repeat
-each measurement two or three times.) Thus determine the equilibrium extension $S_m$ for each value of mass attached.
-\item Plot an appropriate graph and determine the spring constant $k$ of the spring and the mass of the spring $m_s$.
+\item Measure the length $L_M$ of the spring in each case. (For better results you may repeat
+each measurement two or three times.) Thus determine the equilibrium extension $S_M$ for each value of mass attached.
+\item Plot an appropriate graph and determine the spring constant $k$ and mass of the spring $m_s$.
+\item Weigh the spring and compare its mass $m_s$ with the one obtained from the graph experimentally.
 \end{enumerate}
 
 \begin{question}
@@ -140,11 +326,12 @@ each measurement two or three times.) Thus determine the equilibrium extension $
 
 \subsection*{Part B}
 
+In this part you will use the dynamic method to find the time period of a massive spring with different masses attached. The frequency of oscillations of the spring with the upper end fixed and the lower end free (i.e. with no attached mass) will be determined graphically through extrapolation.
+
 \begin{enumerate}
 \item Keep the spring clamped to the retort stand.
 
-\item Try to set the spring into oscillations without any mass attached, you will observe that
-the spring oscillates under the influence of its own weight.
+\item Try to set the spring into oscillations without any mass attached, you will observe that the spring oscillates under the influence of its own weight.
 
 \item Attach different masses to the lower end of the spring and measure the time period of oscillations of the spring mass system for each value of the mass attached. You may measure the time for a number of oscillations to determine the average time period.
 
@@ -157,17 +344,24 @@ the spring oscillates under the influence of its own weight.
 
 \subsection*{Part C}
 
+In this part, you will use a mechanical vibrator to force oscillations on the spring and excite its different normal modes of vibrations. Thus the longitudinal stationary waves will be set up on the spring, whose frequencies will be measured. The fundamental frequency $f_1$ in this case will be compared with $f_0$ obtained in \textbf{Part B}.
+
 \begin{enumerate}
 \item Keep the spring clamped to the long retort stand.
 
 \item Clamp the lower end of the spring to the crocodile clip attached to the vibrator.
 
-\item Connect the output of the function generator to the input of the mechanical vibrator
-through the power amplifier, using the BNC cable.
+\item Connect the output of the signal generator to the input of the mechanical vibrator through the power amplifier, using a BNC cable.
 
-\item Starting from zero, slowly go on increasing the frequency of vibrations produced by the vibrator by increasing the frequency of the sinusoidal signal generated by the function generator. At one particular frequency you will observe that the midpoint of the spring oscillate with large amplitude indicating an antinode. (You may use a small piece of tissue paper to observe the amplitude at the antinode.) This is the fundamental mode (first harmonic) of oscillation of the spring. Adjust the frequency to get the maximum possible amplitude at the antinode. Measure and record this frequency using the frequency setting on the multimeter.
+\item Connect a the multimeter to the signal generator and set it to measure frequency.
 
-\item You will find, however, that it is easier to locate nodes (places where the spring does not move) than antinodes. Increase the frequency further and observe higher harmonics identifying them on the basis of the number of loops you can see between the fixed ends. (If you see $n$ nodes -- or fixed points -- between the endpoints, there are $n+1$ loops.)
+\begin{tip}
+While it might seem sensible to connect the multimeter to the mechanical vibrator, it is found that the amplification of the signal leads to a problem in detecting its frequency. Thus, it is better to connect it directly to the signal generator.
+\end{tip}
+
+\item Starting from zero, slowly increase the frequency of the sinusoidal signal generated by the signal generator. At some particular frequency you will observe the formation of nodes: points on the spring which appear clearly visible as they are not moving.
+
+\item Increase the frequency further and observe higher harmonics identifying them on the basis of the number of loops you can see between the fixed ends. (If you see $n$ nodes -- or fixed points -- between the endpoints, there are $n+1$ loops.)
 
 \item Plot a graph of frequency for different number of loops versus the number of loops. Determine this fundamental frequency $f_1$ from the slope of this graph.
 

@@ -13,6 +13,7 @@
 \usepackage{tcolorbox}
 \usepackage[colorlinks=true, urlcolor=BurntOrange]{hyperref}
 \usepackage{physics}
+\usepackage{todonotes}
 
 \usepackage{nicefrac}
 \usepackage{enumitem}
@@ -37,11 +38,11 @@
 
 % \newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Question}
 
-\newtcolorbox{imp}{colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries}
+\newtcolorbox{imp}{parbox=false,colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries}
 
-\newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
+\newtcolorbox{question}{parbox=false,colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
 
-\newtcolorbox{tip}{colback=green!5!white,colframe=green!35!black,fonttitle=\bfseries,title=Tip}
+\newtcolorbox{tip}{parbox=false,colback=green!5!white,colframe=green!35!black,fonttitle=\bfseries,title=Tip}
 
 
 %% [[ DEFINING `POLYTECHNIQUE' COLOURS
@@ -83,20 +84,25 @@
 
 \vbox{
 \textcolor{Blue}{\part{Introductory Sessions}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\thispagestyle{empty}
+\addtocounter{page}{-1}
 }
 
 \renewcommand{\chaptername}{Session}
 
 \input{01_Data_Collection.tex}
 \input{02_Graphing.tex}
+\includepdf[pages=-]{02a_Graphing_with_Python.pdf}
 \input{03_Errors.tex}
 
 
 
 \vbox{
 \textcolor{Blue}{\part{Experiments}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\thispagestyle{empty}
+\addtocounter{page}{-1}
 }
 
 \renewcommand{\chaptername}{Experiment}
@@ -108,36 +114,39 @@
 \input{08_Formation_of_Rainbow.tex}
 \input{09_Carey_Fosters_Bridge.tex}
 
-\vbox
-{\textcolor{Blue}{\part{Lecture Demonstrations}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-}
+% \vbox
+% {\textcolor{Blue}{\part{Lecture Demonstrations}}
+% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+% }
 
-\renewcommand{\chaptername}{Lecture}
+% \renewcommand{\chaptername}{Lecture}
 
-\input{10_Lecture_Demonstration.tex}
+% \input{10_Lecture_Demonstration.tex}
 
 
-\vbox{
-\textcolor{Blue}{\part{Assessment}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-}
+% \vbox{
+% \textcolor{Blue}{\part{Assessment}}
+% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+% }
 
-\renewcommand{\chaptername}{Exam}
+% \renewcommand{\chaptername}{Exam}
 
-\input{11_Written_Exam.tex}
+% \input{11_Written_Exam.tex}
 
 \vbox{
 \textcolor{Blue}{\part{Appendices}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
 }
 
 \renewcommand{\chaptername}{Appendix}
 
 \input{Appendix_1_Writing_a_Lab_Report.tex}
-\includepdf[pages=-]{Appendix_2a_Graphing_with_Python_solved.pdf}
-\includepdf[pages=-]{Appendix_2b_Linear_Regression_Code.pdf}
+\includepdf[pages=-]{Appendix_2A_Graphing_with_Python_solved.pdf}
+\includepdf[pages=-]{Appendix_2B_Linear_Regression_Code.pdf}
+\setcounter{chapter}{2}
 \input{Appendix_3_Advanced_Error_Analysis.tex}
 
+
+% \input{11b_Written_Exam.tex}
 
 \end{document}

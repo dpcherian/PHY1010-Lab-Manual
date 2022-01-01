@@ -1,4 +1,3 @@
-
 \chapter{Graphing}
 \section{Objectives}
 
@@ -8,7 +7,7 @@
 
 \section{Introduction}
 
-Before you begin, read the \href{https://drive.google.com/open?id=1ZxYayhCt-y0VdKSYUTYUvRuKX6yZgWdD}{article on graphing by Christopher Deacon}. You don't need to grasp all the points in it right way, but as you grow in experience you will appreciate them.
+Before you begin, read the \href{https://www.physics.mun.ca/~cdeacon/publications/graphs_tpt.pdf}{article on graphing by Christopher Deacon}. You don't need to grasp all the points in it right way, but as you grow in experience you will appreciate them.
 
 While we will show you how to use Python, the purpose of this lab is not to familiarise you to coding -- there is another course that does that. Everything here can alternatively be done using MS Excel.
 
@@ -43,9 +42,9 @@ You will have noticed that the way $T$ changes with $l$ is not linear. In fact, 
 If $T^2$ depends linearly on $l$, $T$ must depend linearly on $\sqrt{l}$. This implies that $\log T$ depends linearly on $\log l$. Make columns for $\log T$ and $\log l$ in your table, and make the corresponding plot. 
 
 \begin{question}
-\paragraph{Question:} Compare the slopes of the $T^2 - l$ and $\log T - \log l$. ~\\
+\paragraph{Question:} Compare the slopes of the $T^2 - l$ and $\log T - \log l$ graphs. 
 
-\paragraph{Question:} What are the advantages of plotting the log of a quantity?~\\
+\paragraph{Question:} What are the advantages of plotting the log of a quantity?
 
 \paragraph{Question:} Suppose that you are examining the variation of $y$ with respect to $x$, it is sometimes useful to plot $\log y$ vs $x$ (not $\log x$). What kind of dependence would this indicate?
 
@@ -86,9 +85,10 @@ Let's begin with a sample data table verifying Ohm's law, shown in Table (\ref{t
 \hline
 \multicolumn{2}{|l|}{Experiment $n$: }\\
 \rowcolor{orange!25}
-\multicolumn{2}{|l|}{\textbf{Verification of Ohm's Law for large resistance}}\\
+\multicolumn{2}{|l|}{\textbf{Verification of Ohm's Law for a large resistance}}\\
 \hline
-\multicolumn{2}{|l|}{PC data, 29/01/2019 to 05/01/2019}\\
+\multicolumn{2}{|l|}{Data collected by: Philip Cherian,}\\
+\multicolumn{2}{|l|}{Expt. performed : 29/01/2019 to 05/01/2019}\\
 \hline
 \multicolumn{2}{|l|}{Resistance $R1$; Multimeter \textit{Victor} VC97}\\
 \hline
@@ -129,7 +129,7 @@ Leave a few rows at the top of the spreadsheet for information about the data co
 
 \subsubsection{Plotting and Formatting your Graph}
 
-You are now ready to begin plotting this data. Begin by selecting both columns and \texttt{Insert} a \texttt{Chart}. When you are asked to select a \texttt{Chart Type}, select the \texttt{XY (Scatter)} option with points \textbf{only}. This is important: you might be tempted to ”join the dots”, but that would be misleading: especially if the graph is not linear! When you are done with this, label your axes (\textbf{including units!}): most spreadsheet software take the first column to be the $x$-values and the second the $y$-values, but this can be changed. Your graph should look something like Figure (\ref{fig:samplegraph1}). 
+You are now ready to begin plotting this data. Begin by selecting both columns and \texttt{Insert} a \texttt{Chart}. When you are asked to select a \texttt{Chart Type}, select the \texttt{XY (Scatter)} option with points \textbf{only}. This is important: you might be tempted to ``join the dots'', but that would be misleading: especially if the graph is not linear! When you are done with this, label your axes (\textbf{including units!}): most spreadsheet software take the first column to be the $x$-values and the second the $y$-values, but this can be changed. Your graph should look something like Figure (\ref{fig:samplegraph1}). 
 
 
 \begin{figure}[!htb]
@@ -140,7 +140,7 @@ You are now ready to begin plotting this data. Begin by selecting both columns a
 \end{figure}
 
 
-Excel's biggest user base is business, so default graph formats are mostly setup for that purpose. As a result, changes need to be made to bring it to a `scientific' format: \begin{enumerate}
+Excel's biggest user base is business, so default graph formats are mostly setup for that purpose. As a result, changes need to be made to bring it to a ``scientific'' format: \begin{enumerate}
     \item Remove any unnecessary white space. You can do this by adjusting the minimum and maximum values of the axes. Do this by right clicking the axes and selecting \texttt{Format Axes}.
     
     \item Remove the legend on the right when possible: any information regarding the graph should be added in the caption. You can select it and press \texttt{Delete}. 
@@ -162,7 +162,7 @@ You should now have a graph like the one shown in Figure (\ref{fig:samplegraph2}
 
 \subsubsection{Adding a Trendline}
 
-It should appear to you now that this trend is quite linear. We can now use the computer's algorithm to get the `best' straight line between these points. Don't worry right now about how this is done, you will learn about this in some detail at a later point.
+It should appear to you now that this trend is quite linear. We can now use the computer's algorithm to get the ``best'' straight line between these points. Don't worry right now about how this is done, you will learn about this in some detail at a later point.
 
 Right-clicking the data-points, select \texttt{Add Trendline}. In the dialog box that opens, choose a \texttt{Linear} regression type and select the checkbox that says \texttt{Show Equation}. You can also make the line dotted, and change its colour. 
 
@@ -181,22 +181,10 @@ then edit it to round it off to a more reasonable number of digits. You will und
 \end{figure}
 
 \begin{tip}
-In Microsoft Excel, you can make the current graph style a `template', so that you don't have to keep making most of these changes every time you plot new data. To do this, right-click the chart, and select \texttt{Save as Template}. Choose an appropriate name for the chart template and save it. The chart template automatically appears in the \texttt{Templates} folder for charts. You can access it on the \texttt{All Charts} tab in the \texttt{Insert Chart} or \texttt{Change Chart Type} dialog box, where you can apply a chart template like any other chart type.
+In Microsoft Excel, you can make the current graph style a ``template'', so that you don't have to keep making most of these changes every time you plot new data. To do this, right-click the chart, and select \texttt{Save as Template}. Choose an appropriate name for the chart template and save it. The chart template automatically appears in the \texttt{Templates} folder for charts. You can access it on the \texttt{All Charts} tab in the \texttt{Insert Chart} or \texttt{Change Chart Type} dialog box, where you can apply a chart template like any other chart type.
 \end{tip}
 
-%\includepdf[pages=1-]{02a_Graphing_with_Python.pdf}
 
-
-%\section{Apparatus}
-
-
-
-%\section{Description}
-
-
-
-%\section{Suggested Procedure}
-
-
+%\todo[inline,color=cyan]{Include corrected JupterNotebooks.}
 
 \newpage
