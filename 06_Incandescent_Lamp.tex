@@ -1,8 +1,4 @@
-% \title{The Incandescent Lamp and the Inverse Square Law}
-% \author{An Introduction to Physics through Experiments}
-% \date{}
-% \maketitle
-
+\begin{refsection}
 \chapter{The Incandescent Lamp and the Inverse Square Law}
 
 \section*{Objectives}
@@ -126,17 +122,16 @@ where $P$ is the power supplied to the lamp, $R$ is the resistance of the filame
 \subsection*{Point sources}
 
 
-\begin{minipage}{0.5\linewidth}
-%\vspace{-1.5cm}
 A \textbf{point source} is a single identifiable localised source of, say, light. Such a source has negligible extent, distinguishing it from other source geometries, and are called point sources because in mathematical modelling, they can usually be approximated as a mathematical point to simplify analysis. The actual source need not be physically small, if its size is negligible relative to other length scales in the problem. For example, in astronomy, stars are routinely treated as point sources, even though they are in actuality much larger than the Earth.
 
 For light or sound waves, a point source radiates the same intensity of radiation in all directions. That is, it has no preferred direction of radiation and radiates uniformly in all directions over a sphere centred on the source.
-\end{minipage}
-\begin{minipage}{0.5\linewidth}
-\centering
-\includegraphics[scale=0.7]{isl.png}
-\end{minipage}
 
+\begin{figure}
+    \centering
+    \includegraphics[width=0.5\textwidth]{figs/inversesquarelaw.png}
+    \caption{Motivating the inverse square law: Suppose $S$ represents the light source, and the lines represent rays of light emanating from it. The total number of rays remains constant, as that represents the ``strength'' of the source. However, the density of these rays (that is, the rays per unit area) falls off with distance. If we imagine spheres of different radii ($r$, $2r$, and $3r$) centred around the position of $S$, then the density of rays on the surface of each of these spheres falls as the square of the radius, since the surface area of a sphere increases with the square of the radius. Thus, one would expect the intensity of the point-source to fall as an inverse-square law.}
+    \label{fig:isl}
+\end{figure}
 
 
 \section*{Experimental Setup}
@@ -258,14 +253,19 @@ In this part, you will design an experiment to create a point source and then st
 
 \section*{References}
 
-\begin{enumerate}
+% \begin{enumerate}
 
-\item Justel, T. \href{https://www.fh-muenster.de/ciw/downloads/personal/juestel/juestel/4-InkohaerenteLichtquellen-Glueh-_und_Halogenlampen_english_-1.pdf}{Incandescent and Halogen Lamps}. Retrieved from \url{https://www.fh-muenster.de/ciw/downloads/personal/juestel/juestel/4-InkohaerenteLichtquellen-Glueh-_und_Halogenlampen_english_-1.pdf}.
+% \item Justel, T. \href{https://www.fh-muenster.de/ciw/downloads/personal/juestel/juestel/4-InkohaerenteLichtquellen-Glueh-_und_Halogenlampen_english_-1.pdf}{Incandescent and Halogen Lamps}. Retrieved from \url{https://www.fh-muenster.de/ciw/downloads/personal/juestel/juestel/4-InkohaerenteLichtquellen-Glueh-_und_Halogenlampen_english_-1.pdf}.
 
-\item \href{https://www.elprocus.com/photodiode-working-principle-applications/}{Photodiode Working Principle, Characteristics and Applications}, \textit{ElProCus}. Retrieved from \url{https://www.elprocus.com/photodiode-working-principle-applications/}.
+% \item \href{https://www.elprocus.com/photodiode-working-principle-applications/}{Photodiode Working Principle, Characteristics and Applications}, ElProCus. Retrieved from \url{https://www.elprocus.com/photodiode-working-principle-applications/}.
 
-\end{enumerate}
+% \end{enumerate}
 
+% \nocite{justel_incoherent_nodate}
+\nocite{schubert_light-emitting_2006}
+\nocite{noauthor_photodiode_2016}
 
+\printbibliography[heading=none]
 
 \newpage
+\end{refsection}

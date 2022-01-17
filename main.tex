@@ -16,7 +16,7 @@
 \usepackage{todonotes}
 
 \usepackage{nicefrac}
-\usepackage{enumitem}
+\usepackage[inline]{enumitem}
 \graphicspath{{figs/}}
 
 \setlength{\parskip}{\baselineskip}%
@@ -33,26 +33,19 @@
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
 
-
-% \newtcolorbox{imp}{colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries,title=Important}
-
-% \newtcolorbox{question}{colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,title=Question}
-
 \newtcolorbox{imp}{parbox=false,colback=orange!5!white,colframe=orange!75!black,fonttitle=\bfseries}
-
 \newtcolorbox{question}{parbox=false,colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries}
-
 \newtcolorbox{tip}{parbox=false,colback=green!5!white,colframe=green!35!black,fonttitle=\bfseries,title=Tip}
 
 
-%% [[ DEFINING `POLYTECHNIQUE' COLOURS
+%% [[ DEFINING COLOURS
 \definecolor{Blue}{RGB}{0,59,92}
 \definecolor{Grey}{RGB}{74,73,72}
 \definecolor{Red}{RGB}{247,38,22}
 \definecolor{DarkRed}{RGB}{197,26,27}
 \definecolor{Yellow}{RGB}{223,176,0}
 \definecolor{White}{RGB}{255,255,255}
-%% END POLYTECHNIQUE COLORS]]
+%% END DEFINING COLORS]]
 
 
 \usepackage{color,soul}
@@ -68,11 +61,16 @@
 \makeatother 
 \renewcommand{\thepart}{\Roman{part}}
 
+\usepackage[sorting=none]{biblatex}
+\addbibresource{bibliography.bib}
+
+
 \begin{document}
 \input{00_Title_Page.tex}
 
 \frontmatter
 {
+\input{00A_Preface.tex}
 \setcounter{tocdepth}{1}
 \hypersetup{linkcolor=black}
 \tableofcontents
@@ -84,9 +82,9 @@
 
 \vbox{
 \textcolor{Blue}{\part{Introductory Sessions}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{figs/logo.png}};
 \thispagestyle{empty}
-\addtocounter{page}{-1}
+% \addtocounter{page}{-1}
 }
 
 \renewcommand{\chaptername}{Session}
@@ -100,7 +98,7 @@
 
 \vbox{
 \textcolor{Blue}{\part{Experiments}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{figs/logo.png}};
 \thispagestyle{empty}
 \addtocounter{page}{-1}
 }
@@ -114,28 +112,11 @@
 \input{08_Formation_of_Rainbow.tex}
 \input{09_Carey_Fosters_Bridge.tex}
 
-% \vbox
-% {\textcolor{Blue}{\part{Lecture Demonstrations}}
-% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-% }
-
-% \renewcommand{\chaptername}{Lecture}
-
-% \input{10_Lecture_Demonstration.tex}
-
-
-% \vbox{
-% \textcolor{Blue}{\part{Assessment}}
-% \tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.6] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
-% }
-
-% \renewcommand{\chaptername}{Exam}
-
-% \input{11_Written_Exam.tex}
 
 \vbox{
 \textcolor{Blue}{\part{Appendices}}
-\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{logo}};
+\tikz[remember picture,overlay]\node[shift={(-1,1)},opacity=0.75] at (current page.south east) {\includegraphics[width=17.5cm]{figs/logo.png}};
+\thispagestyle{empty}
 }
 
 \renewcommand{\chaptername}{Appendix}
@@ -145,8 +126,5 @@
 \includepdf[pages=-]{Appendix_2B_Linear_Regression_Code.pdf}
 \setcounter{chapter}{2}
 \input{Appendix_3_Advanced_Error_Analysis.tex}
-
-
-% \input{11b_Written_Exam.tex}
 
 \end{document}
